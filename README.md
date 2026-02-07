@@ -36,21 +36,59 @@ Add the following content to `extract_mini.py`:
 
 ```python
 import json
-from evalplus.data import get_human_eval_plus
+from pathlib import Path
+from evalplus.data.humaneval import get_human_eval_plus, get_human_eval
 
-# Load HumanEvalPlus-Mini (data only, no evaluation)
-dataset = get_human_eval_plus(mini=True)
+"""
+Construct a dataset with:
+- HumanEvalPlus full task definitions
+- Mini-selected input sets
+- Original HumanEval test harness
 
-print("Number of tasks:", len(dataset))
+No evaluation or execution is performed.
+"""
 
-# dataset is a dict: {task_id: task_dict}
-first_task = next(iter(dataset.values()))
-print("Keys per task:", first_task.keys())
+# 1. Load datasets
+plus_full = get_human_eval_plus(mini=False)
+plus_mini = get_human_eval_plus(mini=True)
+human_eval = get_human_eval()
 
-# Export to a JSONL file
-with open("humanevalplus_mini.jsonl", "w") as f:
-    for task_id, task in dataset.items():
-        f.write(json.dumps(task) + "\n")
+# 2. Consistency checks
+assert plus_full.keys() == plus_mini.keys(), "Mismatch between full and mini tasks"
+assert plus_full.keys() == human_eval.keys(), "Mismatch with HumanEval tasks"
+
+print("Number of tasks:", len(plus_full))
+
+# 3. Merge datasets
+out_path = Path(__file__).resolve().parent / "humanevalplus_full_mini_inputs_with_test.jsonl"
+with open(out_path, "w") as f:
+    for task_id in plus_full:
+        full_task = plus_full[task_id]
+        mini_task = plus_mini[task_id]
+        he_task = human_eval[task_id]
+
+        merged_task = {
+            # identity
+            "task_id": task_id,
+
+            # from HumanEvalPlus (full)
+            "prompt": full_task["prompt"],
+            "contract": full_task.get("contract"),
+            "entry_point": full_task["entry_point"],
+            "canonical_solution": full_task["canonical_solution"],
+
+            # mini-selected inputs
+            "base_input": mini_task["base_input"],
+            "plus_input": mini_task["plus_input"],
+            "atol": mini_task.get("atol"),
+
+            # from original HumanEval
+            "test": he_task["test"],
+        }
+
+        f.write(json.dumps(merged_task) + "\n")
+
+print(f"Dataset written to {out_path}")
 ```
 
 Save and exit.
@@ -64,7 +102,19 @@ python extract_mini.py
 Upon successful execution, the following file will be generated:
 
 ```text
-humanevalplus_mini.jsonl
+humanevalplus_full_mini_inputs_with_test.jsonl
 ```
 
 This file corresponds to the **HumanEvalPlus-Mini dataset**, containing the original HumanEval tasks together with the mini-selected EvalPlus test inputs, and does not include any model outputs or evaluation results.
+
+### Step 6: Move the Generated Dataset File
+
+After the dataset file has been successfully generated, move it to the parent directory for easier access by downstream scripts.
+```bash
+mv humanevalplus_full_mini_inputs_with_test.jsonl ..
+```
+
+After this step, the file will be located at:
+```text
+../humanevalplus_full_mini_inputs_with_test.jsonl
+```
