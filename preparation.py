@@ -8,7 +8,7 @@ TEST_COUNT = 164
 
 # Open HumanEval.jsonl file
 def parse_human_eval_jsonl():
-    with open('humanevalplus_full_mini_inputs_with_test.jsonl', 'r') as f:
+    with open('humanevalplus_mini.jsonl', 'r') as f:
         if os.path.exists('human-eval'):
             delete_folder('human-eval')
 
@@ -81,10 +81,6 @@ def create_experiment_folders():
 
         os.chdir('experiment-code')
         create_folder(str(i))
-
-        with open('test_' + str(i) + '.py', 'w') as f:
-            f.write(json_obj['test'])
-            print("Test file for " + str(i) + " created")
 
         with open('inputs_' + str(i) + '.json', 'w', encoding='utf-8') as f:
             inputs_obj = {
