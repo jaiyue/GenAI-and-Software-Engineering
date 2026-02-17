@@ -96,16 +96,14 @@ def create_experiment_folders():
 
         os.chdir('..')
         os.chdir('..')
-        os.chdir('code_generation')
+        os.chdir('experiment-code')
         os.chdir(str(i))
 
         with open('canonical_solution_' + str(i) + '.py', 'w') as f:
+            # Write the prompt to the file
+            f.write(json_obj["prompt"])
             # Write the canonical solution to the file
-            sltn = ""
-            for j in json_obj['canonical_solution'].splitlines():
-                # Remove 4 spaces in the beginning of the line
-                sltn += j[4:] + '\n'
-            f.write(sltn)
+            f.write(json_obj["canonical_solution"])
             print("Canonical solution file for " + str(i) + " created")
 
         os.chdir('..')

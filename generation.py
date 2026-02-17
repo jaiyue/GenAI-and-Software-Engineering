@@ -7,8 +7,6 @@ import os
 import shutil
 import subprocess
 import glob
-from unittest import result
-
 
 # Generate code using Copilot CLI
 def generate_code_with_copilot(prompt: str) -> str:
