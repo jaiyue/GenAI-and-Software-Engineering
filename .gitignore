@@ -1,0 +1,10 @@
+# Ignore all directories
+*/
+
+# Allow root-level files
+!.gitignore
+!*.py
+!*.md
+!*.txt
+!requirements.txt
+!HumanEval.jsonl
