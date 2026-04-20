@@ -1,0 +1,33 @@
+{
+  "base_input": [
+    [
+      "Hello world"
+    ],
+    [
+      ""
+    ],
+    [
+      "A B C"
+    ],
+    [
+      "password"
+    ]
+  ],
+  "plus_input": [
+    [
+      "5873hajsdklh"
+    ],
+    [
+      ""
+    ],
+    [
+      "This is a long string to hash to MD5"
+    ],
+    [
+      " \t \n \r \f "
+    ]
+  ],
+  "atol": 0,
+  "contract": "\n    assert isinstance(text, str), \"invalid inputs\" # $_CONTRACT_$\n",
+  "entry_point": "string_to_md5"
+}

@@ -1,0 +1,30 @@
+{
+  "base_input": [
+    [
+      0
+    ],
+    [
+      32
+    ],
+    [
+      103
+    ],
+    [
+      15
+    ]
+  ],
+  "plus_input": [
+    [
+      100001
+    ],
+    [
+      0
+    ],
+    [
+      7
+    ]
+  ],
+  "atol": 0,
+  "contract": "\n    assert type(decimal) == int, \"invalid inputs\" # $_CONTRACT_$\n    assert decimal >= 0, \"invalid inputs\" # $_CONTRACT_$\n",
+  "entry_point": "decimal_to_binary"
+}

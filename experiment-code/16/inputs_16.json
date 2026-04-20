@@ -1,0 +1,36 @@
+{
+  "base_input": [
+    [
+      ""
+    ],
+    [
+      "abcde"
+    ],
+    [
+      "abcdecadeCADE"
+    ],
+    [
+      "aaaaAAAAaaaa"
+    ],
+    [
+      "Jerry jERRY JeRRRY"
+    ]
+  ],
+  "plus_input": [
+    [
+      "hello wThe quick brown fox jumps over e lazy doAbCdEfGgorld"
+    ],
+    [
+      "!.\"\u00a3$%^rQXXQxau&*()_+-={}[1234567890\",]|\\:;\"<>,.?/^~`"
+    ],
+    [
+      ""
+    ],
+    [
+      "a"
+    ]
+  ],
+  "atol": 0,
+  "contract": "\n    assert isinstance(string, str), \"invalid inputs\" # $_CONTRACT_$\n",
+  "entry_point": "count_distinct_characters"
+}

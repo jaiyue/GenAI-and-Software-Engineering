@@ -1,0 +1,63 @@
+{
+  "base_input": [
+    [
+      4
+    ],
+    [
+      6
+    ],
+    [
+      8
+    ],
+    [
+      10
+    ],
+    [
+      11
+    ],
+    [
+      12
+    ],
+    [
+      13
+    ],
+    [
+      16
+    ]
+  ],
+  "plus_input": [
+    [
+      8
+    ],
+    [
+      21
+    ],
+    [
+      50
+    ],
+    [
+      6
+    ],
+    [
+      105
+    ],
+    [
+      22
+    ],
+    [
+      0
+    ],
+    [
+      10
+    ],
+    [
+      102
+    ],
+    [
+      -2
+    ]
+  ],
+  "atol": 0,
+  "contract": "\n    assert type(n) == int, \"invalid inputs\" # $_CONTRACT_$\n",
+  "entry_point": "is_equal_to_sum_even"
+}

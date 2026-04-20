@@ -1,0 +1,102 @@
+{
+  "base_input": [
+    [
+      [],
+      "john"
+    ],
+    [
+      [
+        "xxx",
+        "asd",
+        "xxy",
+        "john doe",
+        "xxxAAA",
+        "xxx"
+      ],
+      "xxx"
+    ]
+  ],
+  "plus_input": [
+    [
+      [
+        "abc",
+        "abcd",
+        "abcde"
+      ],
+      "abc"
+    ],
+    [
+      [
+        "qwerty",
+        "QwertY",
+        "qwertyuiop",
+        "QWERTYUIOP",
+        "asdfgh",
+        "ASDFGH",
+        "as fgh",
+        "ASD FGH"
+      ],
+      "qwe"
+    ],
+    [
+      "apriccot",
+      ""
+    ],
+    [
+      [
+        "a",
+        "ab",
+        "abc",
+        "ba",
+        "bb",
+        "bc"
+      ],
+      "a"
+    ],
+    [
+      "",
+      "aa"
+    ],
+    [
+      [
+        "",
+        " ",
+        "\n",
+        "\t",
+        "a",
+        "ab",
+        "abc",
+        "abcde"
+      ],
+      ""
+    ],
+    [
+      [
+        "qwerty",
+        "QwertY",
+        "qwertyuiop",
+        "QWERTYUIOP",
+        "asdfgh",
+        "ASDFGH",
+        "as fgh",
+        "ASD FGH"
+      ],
+      "ASDFGH"
+    ],
+    [
+      "f",
+      " "
+    ],
+    [
+      [
+        "zzz",
+        "zzz",
+        "zzz"
+      ],
+      "z"
+    ]
+  ],
+  "atol": 0,
+  "contract": "\n    assert all(isinstance(s, str) for s in strings), \"invalid inputs\" # $_CONTRACT_$\n    assert isinstance(prefix, str), \"invalid inputs\" # $_CONTRACT_$\n",
+  "entry_point": "filter_by_prefix"
+}

@@ -1,0 +1,48 @@
+{
+  "base_input": [
+    [
+      5
+    ],
+    [
+      8
+    ],
+    [
+      10
+    ],
+    [
+      12
+    ]
+  ],
+  "plus_input": [
+    [
+      4
+    ],
+    [
+      1
+    ],
+    [
+      2
+    ],
+    [
+      3
+    ],
+    [
+      0
+    ],
+    [
+      6
+    ],
+    [
+      24
+    ],
+    [
+      1000
+    ],
+    [
+      41
+    ]
+  ],
+  "atol": 0,
+  "contract": "\n    assert type(n) == int, \"invalid inputs\" # $_CONTRACT_$\n    assert n >= 0, \"invalid inputs\" # $_CONTRACT_$\n",
+  "entry_point": "fib4"
+}

@@ -1,0 +1,48 @@
+{
+  "base_input": [
+    [
+      "a b b a"
+    ],
+    [
+      "a b c a b"
+    ],
+    [
+      "a b c d g"
+    ],
+    [
+      "r t g"
+    ],
+    [
+      "b b b b a"
+    ],
+    [
+      "r t g"
+    ],
+    [
+      ""
+    ],
+    [
+      "a"
+    ]
+  ],
+  "plus_input": [
+    [
+      "a b b  b b b"
+    ],
+    [
+      ""
+    ],
+    [
+      "h i j j   k l  m m m n o o o o  p"
+    ],
+    [
+      "h i j j   k l  m  o o  p"
+    ],
+    [
+      "x y z x y z x"
+    ]
+  ],
+  "atol": 0,
+  "contract": "\n    assert isinstance(test, str), \"invalid inputs\" # $_CONTRACT_$\n    words = test.split(\" \") # $_CONTRACT_$\n    for word in words: # $_CONTRACT_$\n        if word != \"\": # $_CONTRACT_$\n            assert len(word) == 1 and word.islower(), \"invalid inputs\" # $_CONTRACT_$\n",
+  "entry_point": "histogram"
+}

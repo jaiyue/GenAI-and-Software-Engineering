@@ -1,0 +1,36 @@
+{
+  "base_input": [
+    [
+      2
+    ],
+    [
+      3
+    ],
+    [
+      4
+    ],
+    [
+      8
+    ],
+    [
+      10
+    ]
+  ],
+  "plus_input": [
+    [
+      5
+    ],
+    [
+      10000
+    ],
+    [
+      1000000000
+    ],
+    [
+      1
+    ]
+  ],
+  "atol": 0,
+  "contract": "\n    assert type(n) == int, \"invalid inputs\" # $_CONTRACT_$\n    assert n >= 1, \"invalid inputs\" # $_CONTRACT_$\n",
+  "entry_point": "car_race_collision"
+}

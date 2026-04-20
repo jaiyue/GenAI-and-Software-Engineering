@@ -1,0 +1,33 @@
+{
+  "base_input": [
+    [
+      4
+    ],
+    [
+      5
+    ],
+    [
+      7
+    ],
+    [
+      1
+    ]
+  ],
+  "plus_input": [
+    [
+      2
+    ],
+    [
+      3
+    ],
+    [
+      6
+    ],
+    [
+      500
+    ]
+  ],
+  "atol": 0,
+  "contract": "\n    assert type(n) == int, \"invalid inputs\" # $_CONTRACT_$\n    assert n > 0, \"invalid inputs\" # $_CONTRACT_$\n",
+  "entry_point": "special_factorial"
+}

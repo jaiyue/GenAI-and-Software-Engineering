@@ -1,0 +1,36 @@
+{
+  "base_input": [
+    [
+      "Hi, my name is John"
+    ],
+    [
+      "One, two, three, four, five, six"
+    ],
+    [
+      "Hi, my name"
+    ],
+    [
+      "One,, two, three, four, five, six,"
+    ],
+    [
+      ""
+    ],
+    [
+      "ahmed     , gamal"
+    ]
+  ],
+  "plus_input": [
+    [
+      "Elephant,giraffe,,lion,zebra"
+    ],
+    [
+      "Hi,there is,a lot,of,space   ,     ,"
+    ],
+    [
+      "Multi\nline\nstring\nHello,\nworld!\n"
+    ]
+  ],
+  "atol": 0,
+  "contract": "\n    assert isinstance(s, str), \"invalid inputs\" # $_CONTRACT_$\n",
+  "entry_point": "words_string"
+}

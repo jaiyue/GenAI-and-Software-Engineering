@@ -1,0 +1,54 @@
+{
+  "base_input": [
+    [
+      []
+    ],
+    [
+      [
+        4,
+        {},
+        [],
+        23.2,
+        9,
+        "adasd"
+      ]
+    ],
+    [
+      [
+        3,
+        "c",
+        3,
+        3,
+        "a",
+        "b"
+      ]
+    ]
+  ],
+  "plus_input": [
+    [
+      [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    ],
+    [
+      [
+        true,
+        false,
+        null,
+        0,
+        -10,
+        "test",
+        [],
+        {},
+        3.14
+      ]
+    ]
+  ],
+  "atol": 0,
+  "contract": "\n    assert type(values) == list, \"invalid inputs\" # $_CONTRACT_$\n",
+  "entry_point": "filter_integers"
+}

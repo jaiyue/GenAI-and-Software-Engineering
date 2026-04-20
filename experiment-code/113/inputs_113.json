@@ -1,0 +1,49 @@
+{
+  "base_input": [
+    [
+      [
+        "1234567"
+      ]
+    ],
+    [
+      [
+        "3",
+        "11111111"
+      ]
+    ],
+    [
+      [
+        "271",
+        "137",
+        "314"
+      ]
+    ]
+  ],
+  "plus_input": [
+    [
+      [
+        "2468"
+      ]
+    ],
+    [
+      [
+        "13579",
+        "2468",
+        "357"
+      ]
+    ],
+    [
+      [
+        "11224466558888",
+        "55555",
+        "1234567"
+      ]
+    ],
+    [
+      []
+    ]
+  ],
+  "atol": 0,
+  "contract": "\n    assert type(lst) == list, \"invalid inputs\" # $_CONTRACT_$\n    assert all(isinstance(s, str) for s in lst), \"invalid inputs\" # $_CONTRACT_$\n    assert all(s.isdigit() for s in lst), \"invalid inputs\" # $_CONTRACT_$\n",
+  "entry_point": "odd_count"
+}

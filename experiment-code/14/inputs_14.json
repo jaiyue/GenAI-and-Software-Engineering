@@ -1,0 +1,33 @@
+{
+  "base_input": [
+    [
+      ""
+    ],
+    [
+      "asdfgh"
+    ],
+    [
+      "WWW"
+    ]
+  ],
+  "plus_input": [
+    [
+      "Hello there!"
+    ],
+    [
+      "racecHello therre!ar"
+    ],
+    [
+      ""
+    ],
+    [
+      "n"
+    ],
+    [
+      "xx"
+    ]
+  ],
+  "atol": 0,
+  "contract": "\n    assert isinstance(string, str), \"invalid inputs\" # $_CONTRACT_$\n",
+  "entry_point": "all_prefixes"
+}

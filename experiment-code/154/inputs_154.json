@@ -1,0 +1,73 @@
+{
+  "base_input": [
+    [
+      "xyzw",
+      "xyw"
+    ],
+    [
+      "yello",
+      "ell"
+    ],
+    [
+      "whattup",
+      "ptut"
+    ],
+    [
+      "efef",
+      "fee"
+    ],
+    [
+      "abab",
+      "aabb"
+    ],
+    [
+      "winemtt",
+      "tinem"
+    ]
+  ],
+  "plus_input": [
+    [
+      "hello",
+      "olelh"
+    ],
+    [
+      "coffee",
+      "ffeco"
+    ],
+    [
+      "mississipi",
+      "mississipi"
+    ],
+    [
+      "racanagramecar",
+      ""
+    ],
+    [
+      "abcdefg",
+      "cde"
+    ],
+    [
+      "programming",
+      "ammiprogr"
+    ],
+    [
+      "manipation",
+      "ationmani"
+    ],
+    [
+      "",
+      ""
+    ],
+    [
+      "mississispi",
+      "mississispii"
+    ],
+    [
+      "anagram",
+      "margana"
+    ]
+  ],
+  "atol": 0,
+  "contract": "\n    assert isinstance(a, str) and isinstance(b, str), \"invalid inputs\" # $_CONTRACT_$\n",
+  "entry_point": "cycpattern_check"
+}

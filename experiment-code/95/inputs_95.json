@@ -1,0 +1,170 @@
+{
+  "base_input": [
+    [
+      {
+        "p": "pineapple",
+        "b": "banana"
+      }
+    ],
+    [
+      {
+        "p": "pineapple",
+        "b": "banana"
+      }
+    ],
+    [
+      {
+        "p": "pineapple",
+        "A": "banana",
+        "B": "banana"
+      }
+    ],
+    [
+      {
+        "p": "pineapple",
+        "A": "banana",
+        "B": "banana"
+      }
+    ],
+    [
+      {
+        "p": "pineapple",
+        "5": "banana",
+        "a": "apple"
+      }
+    ],
+    [
+      {
+        "p": "pineapple",
+        "5": "banana",
+        "a": "apple"
+      }
+    ],
+    [
+      {
+        "Name": "John",
+        "Age": "36",
+        "City": "Houston"
+      }
+    ],
+    [
+      {
+        "Name": "John",
+        "Age": "36",
+        "City": "Houston"
+      }
+    ],
+    [
+      {
+        "STATE": "NC",
+        "ZIP": "12345"
+      }
+    ],
+    [
+      {
+        "STATE": "NC",
+        "ZIP": "12345"
+      }
+    ],
+    [
+      {
+        "fruit": "Orange",
+        "taste": "Sweet"
+      }
+    ],
+    [
+      {
+        "fruit": "Orange",
+        "taste": "Sweet"
+      }
+    ],
+    [
+      {}
+    ],
+    [
+      {}
+    ]
+  ],
+  "plus_input": [
+    [
+      {
+        "FIRST_NAME": "John",
+        "LAST_NAME": "DOE",
+        "AGE": 35,
+        "CITY": "NEW YORK",
+        "INCOME": "$50,000"
+      }
+    ],
+    [
+      {}
+    ],
+    [
+      {
+        "first_name": "John",
+        "last_name": "Doe",
+        "age": 35,
+        "city": "New York",
+        "income": "$50,000"
+      }
+    ],
+    [
+      {
+        "1": "apple",
+        "2": "banana",
+        "3": "cherry"
+      }
+    ],
+    [
+      {
+        "8": "banana"
+      }
+    ],
+    [
+      {
+        "FIRST_NAME": "2019n",
+        "LAST_NAME": "OE",
+        "AGE": 35,
+        "CITY": "NEW YORK",
+        "COME": "$50,0000"
+      }
+    ],
+    [
+      {
+        "PI": 1.7300435058060522,
+        "new yorrk": 2.2762868739904514
+      }
+    ],
+    [
+      {
+        "first_name": "John",
+        "last_name": "Doe",
+        "age": 35,
+        "city": "New York",
+        "income": "$50,000",
+        "ageage": "Dooe",
+        "new yorok": "8"
+      }
+    ],
+    [
+      {
+        "FIRST_NAME": "John",
+        "LAST_NAME": "DOE",
+        "AGE": 35,
+        "CITY": "NK",
+        "INCOME": "$50,000",
+        "1": 35
+      }
+    ],
+    [
+      {
+        "PI": 3.14159,
+        "IPI": 2.6443947966293897,
+        "Johageage": 2.9360614575298136,
+        "JohaJgeage": 3.14159
+      }
+    ]
+  ],
+  "atol": 0,
+  "contract": "\n    assert type(dict).__name__ == \"dict\", \"invalid inputs\" # $_CONTRACT_$\n",
+  "entry_point": "check_dict_case"
+}

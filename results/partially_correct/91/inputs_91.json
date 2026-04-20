@@ -1,0 +1,48 @@
+{
+  "base_input": [
+    [
+      "Hello world"
+    ],
+    [
+      "Is the sky blue?"
+    ],
+    [
+      "I love It !"
+    ],
+    [
+      "bIt"
+    ],
+    [
+      "I feel good today. I will be productive. will kill It"
+    ],
+    [
+      "You and I are going for a walk"
+    ]
+  ],
+  "plus_input": [
+    [
+      "I am very happy today. I love spending time with my friends."
+    ],
+    [
+      "Hello world. I am feeling good today. Are the plants green? Who knows! I bet It is hot outside."
+    ],
+    [
+      "Have you ever gone skydiving before? I did it once and it was amazing."
+    ],
+    [
+      "I have a lot of work to do today. I wish I could take a naI forgot my phone in the car. Oh no, now I have to go back and get it.p iI enjoy reading bo oks. They help me learn new things.nstead."
+    ],
+    [
+      "Hello world. I am feeling goohd today. Are the plants greent? Who knows! I beHello world. I am feelihe plants greent? Who knows! I bet It is hot outside. outside."
+    ],
+    [
+      "In the morning, I lI forgot my phone in the car. Oh no, now I have to go back and get it.ike to have a cup of coffee to start my day off right. How about you?"
+    ],
+    [
+      "I"
+    ]
+  ],
+  "atol": 0,
+  "contract": "\n    assert type(S) == str, \"invalid inputs\" # $_CONTRACT_$\n",
+  "entry_point": "is_bored"
+}

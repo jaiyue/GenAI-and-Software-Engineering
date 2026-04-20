@@ -1,0 +1,90 @@
+{
+  "base_input": [
+    [
+      "Hello"
+    ],
+    [
+      "abcdcba"
+    ],
+    [
+      "kittens"
+    ],
+    [
+      "orange"
+    ],
+    [
+      "wow"
+    ],
+    [
+      "world"
+    ],
+    [
+      "MadaM"
+    ],
+    [
+      "Wow"
+    ],
+    [
+      ""
+    ],
+    [
+      "HI"
+    ],
+    [
+      "go"
+    ],
+    [
+      "gogo"
+    ],
+    [
+      "aaaaaaaaaaaaaaa"
+    ],
+    [
+      "Madam"
+    ],
+    [
+      "M"
+    ],
+    [
+      "0"
+    ]
+  ],
+  "plus_input": [
+    [
+      "abcde"
+    ],
+    [
+      "abcd"
+    ],
+    [
+      "ab"
+    ],
+    [
+      "ThWThisthaaatxjmnzThe qulengantidMsYJFEtsgcehuqTkrPxBLWjpDfmvNaRlKOiVbnZIlishmentarilanismbrownover mfox judog.is"
+    ],
+    [
+      "a"
+    ],
+    [
+      ""
+    ],
+    [
+      "The qu ick brown fox jumpsb over the lahaszyThequickbrownfoxjumpsoverthelazydogThequtheickbrownfoxjumpssoverthelazydogog."
+    ],
+    [
+      "lengtThiMsYJFEtsgcehuqTkrPdog.xBantidisestablishmentsarRlKOiVgbnZIoaethexBLThWxjmnzThe quickp brownjumpsThe quick brown fox jumps Wxjmnzover the lazy dog.KOiVbThe quick brown fox jumps Wxjmnzover the lazy dog.WxjmnzoveThisnZIoa.h"
+    ],
+    [
+      "pabc"
+    ],
+    [
+      "sis"
+    ],
+    [
+      "aaaa"
+    ]
+  ],
+  "atol": 0,
+  "contract": "\n    assert type(string) == str, \"invalid inputs\" # $_CONTRACT_$\n",
+  "entry_point": "prime_length"
+}

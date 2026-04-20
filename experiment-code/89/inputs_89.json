@@ -1,0 +1,48 @@
+{
+  "base_input": [
+    [
+      "hi"
+    ],
+    [
+      "asdfghjkl"
+    ],
+    [
+      "gf"
+    ],
+    [
+      "et"
+    ],
+    [
+      "faewfawefaewg"
+    ],
+    [
+      "hellomyfriend"
+    ],
+    [
+      "dxzdlmnilfuhmilufhlihufnmlimnufhlimnufhfucufh"
+    ],
+    [
+      "a"
+    ]
+  ],
+  "plus_input": [
+    [
+      "abcde"
+    ],
+    [
+      "uvwxyz"
+    ],
+    [
+      "hello world"
+    ],
+    [
+      "cpaararuvvzte1a2b3cstpark1abct23"
+    ],
+    [
+      ""
+    ]
+  ],
+  "atol": 0,
+  "contract": "\n    assert s == \"\" or s.islower(), \"invalid inputs\" # $_CONTRACT_$\n",
+  "entry_point": "encrypt"
+}

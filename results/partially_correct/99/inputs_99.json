@@ -1,0 +1,45 @@
+{
+  "base_input": [
+    [
+      "10"
+    ],
+    [
+      "14.5"
+    ],
+    [
+      "-15.5"
+    ],
+    [
+      "15.3"
+    ],
+    [
+      "0"
+    ]
+  ],
+  "plus_input": [
+    [
+      "5.5"
+    ],
+    [
+      "-2.8"
+    ],
+    [
+      "-6.5"
+    ],
+    [
+      "0.5"
+    ],
+    [
+      "-51.27890000000001"
+    ],
+    [
+      "1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+    ],
+    [
+      "11."
+    ]
+  ],
+  "atol": 0,
+  "contract": "\n    try: # $_CONTRACT_$\n        assert isinstance(value, str) # $_CONTRACT_$\n        value = float(value) # $_CONTRACT_$\n    except: # $_CONTRACT_$\n        raise Exception(\"invalid inputs\") # $_CONTRACT_$\n    import math # $_CONTRACT_$\n    assert not (math.isinf(value) or math.isnan(value)), \"invalid inputs\" # $_CONTRACT_$\n",
+  "entry_point": "closest_integer"
+}

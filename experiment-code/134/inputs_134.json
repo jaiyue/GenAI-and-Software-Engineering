@@ -1,0 +1,72 @@
+{
+  "base_input": [
+    [
+      "apple"
+    ],
+    [
+      "apple pi e"
+    ],
+    [
+      "eeeee"
+    ],
+    [
+      "A"
+    ],
+    [
+      "Pumpkin pie "
+    ],
+    [
+      "Pumpkin pie 1"
+    ],
+    [
+      ""
+    ],
+    [
+      "eeeee e "
+    ],
+    [
+      "apple pie"
+    ],
+    [
+      "apple pi e "
+    ]
+  ],
+  "plus_input": [
+    [
+      "Pumpkin pi e"
+    ],
+    [
+      "!"
+    ],
+    [
+      ""
+    ],
+    [
+      "pi"
+    ],
+    [
+      "aaaaa 1"
+    ],
+    [
+      "ap"
+    ],
+    [
+      "t"
+    ],
+    [
+      "aaaaaa A"
+    ],
+    [
+      "applApple $%appple pitie!^pieefavoritequickapple pifoox\ne"
+    ],
+    [
+      "pUMPcake?blueberrymufufinc!KPIEPulmpkin pi e"
+    ],
+    [
+      "k "
+    ]
+  ],
+  "atol": 0,
+  "contract": "\n    assert type(txt) == str, \"invalid inputs\" # $_CONTRACT_$\n",
+  "entry_point": "check_if_last_char_is_a_letter"
+}

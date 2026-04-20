@@ -1,0 +1,110 @@
+{
+  "base_input": [
+    [
+      []
+    ],
+    [
+      [
+        "x",
+        "y",
+        "z"
+      ]
+    ],
+    [
+      [
+        "x",
+        "yyy",
+        "zzzz",
+        "www",
+        "kkkk",
+        "abc"
+      ]
+    ]
+  ],
+  "plus_input": [
+    [
+      [
+        "",
+        "a",
+        "aa",
+        "aaa"
+      ]
+    ],
+    [
+      []
+    ],
+    [
+      [
+        "",
+        "Hola,",
+        "\u25ef\u25ef\u25ef",
+        "bun\u0103 ziua",
+        " \u043f\u0440\u0438\u0432\u0435\u0442,",
+        " ",
+        "\ud83d\ude00\ud83d\ude00\ud83d\ude00",
+        "         ",
+        "rape"
+      ]
+    ],
+    [
+      [
+        "Apple",
+        "bbccc"
+      ]
+    ],
+    [
+      [
+        "  a   "
+      ]
+    ],
+    [
+      [
+        " ",
+        "",
+        "        ",
+        "  Grrape   ",
+        "\u00df",
+        "   \t",
+        " ",
+        " "
+      ]
+    ],
+    [
+      [
+        "cat",
+        "horse"
+      ]
+    ],
+    [
+      [
+        "\u00df",
+        "\u25ef",
+        "\u00df",
+        "\u00d8",
+        "\u0153",
+        "\uf8ff"
+      ]
+    ],
+    [
+      [
+        "a",
+        "b",
+        "aa",
+        "bb"
+      ]
+    ],
+    [
+      [
+        "Hello, Bonjour, \u3053\u3093\u306b\u3061\u306f, Hola, \u043f\u0440\u0438NEs\u0432\u0435\u0442",
+        "Hello, Bonjour, \u3053\u3093\u306b\u3061\u306f, Hola, \u043f\u0440\u0438NEs\u0432\u0435\u0442",
+        "\u3053\u3093\u306b\u3061\u306f, Bonjour,u Hello, Hola, \u043f\u0440\u0438\u0432\u0435\u0442",
+        "\u3053\u3093\u306b\u3061\u306f, Bonjour,u Hello, Hola, \u043f\u0440bun\u0103 ziua\u0432\u0435\u0442",
+        "\u043f\u0440\u0438\u0432\u0435\u0442, Hola, Bonjour, \u3053\u3093\u306b\u3061\u306f, Hello",
+        "Hello, Bonjour, \u3053\u3093\u306b\u3061\u306f, Hola, \u043f\u0440\u0438NEs\u0432\u0435\u0442"
+      ]
+    ]
+  ],
+  "atol": 0,
+  "contract": "\n    assert type(strings) == list, \"invalid inputs\" # $_CONTRACT_$\n    assert all([isinstance(v, str) for v in strings]), \"invalid inputs\" # $_CONTRACT_$\n",
+  "entry_point": "longest"
+}

@@ -1,0 +1,42 @@
+{
+  "base_input": [
+    [
+      "Hi"
+    ],
+    [
+      "hello"
+    ],
+    [
+      "number"
+    ],
+    [
+      "abcd"
+    ],
+    [
+      "Hello World!!!"
+    ],
+    [
+      ""
+    ],
+    [
+      "Hi. My name is Mister Robot. How are you?"
+    ]
+  ],
+  "plus_input": [
+    [
+      "12345"
+    ],
+    [
+      "\n\n123 456\n789\n"
+    ],
+    [
+      " \t\nG TheH I      "
+    ],
+    [
+      ""
+    ]
+  ],
+  "atol": 0,
+  "contract": "\n    assert type(s) == str, \"invalid inputs\" # $_CONTRACT_$\n",
+  "entry_point": "anti_shuffle"
+}

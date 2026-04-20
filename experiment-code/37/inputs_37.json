@@ -1,0 +1,80 @@
+{
+  "base_input": [
+    [
+      [
+        1,
+        2,
+        3
+      ]
+    ],
+    [
+      [
+        5,
+        3,
+        -5,
+        2,
+        -3,
+        3,
+        9,
+        0,
+        123,
+        1,
+        -10
+      ]
+    ],
+    [
+      [
+        5,
+        8,
+        -12,
+        4,
+        23,
+        2,
+        3,
+        11,
+        12,
+        -10
+      ]
+    ]
+  ],
+  "plus_input": [
+    [
+      [
+        2,
+        6,
+        4,
+        8,
+        10
+      ]
+    ],
+    [
+      []
+    ],
+    [
+      [
+        11,
+        7,
+        6,
+        9,
+        14,
+        -1
+      ]
+    ],
+    [
+      [
+        0,
+        0,
+        0,
+        -1,
+        -1,
+        -1,
+        2,
+        2,
+        2
+      ]
+    ]
+  ],
+  "atol": 0,
+  "contract": "\n    assert type(l) == list, \"invalid inputs\" # $_CONTRACT_$\n    assert all(type(x) in [int, float] for x in l), \"invalid inputs\" # $_CONTRACT_$\n",
+  "entry_point": "sort_even"
+}

@@ -1,0 +1,49 @@
+{
+  "base_input": [
+    [
+      3,
+      7
+    ],
+    [
+      10,
+      15
+    ],
+    [
+      49,
+      14
+    ],
+    [
+      144,
+      60
+    ]
+  ],
+  "plus_input": [
+    [
+      100,
+      50
+    ],
+    [
+      123456789,
+      987654321
+    ],
+    [
+      100,
+      27
+    ],
+    [
+      540,
+      540
+    ],
+    [
+      2147483647,
+      1
+    ],
+    [
+      191,
+      1000000000
+    ]
+  ],
+  "atol": 0,
+  "contract": "\n    assert type(a) == int and type(b) == int, \"invalid inputs\" # $_CONTRACT_$\n    assert a > 0 and b > 0, \"invalid inputs\" # $_CONTRACT_$\n",
+  "entry_point": "greatest_common_divisor"
+}

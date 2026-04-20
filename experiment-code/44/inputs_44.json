@@ -1,0 +1,81 @@
+{
+  "base_input": [
+    [
+      8,
+      3
+    ],
+    [
+      9,
+      3
+    ],
+    [
+      234,
+      2
+    ],
+    [
+      16,
+      2
+    ],
+    [
+      8,
+      2
+    ],
+    [
+      7,
+      2
+    ],
+    [
+      2,
+      3
+    ],
+    [
+      3,
+      4
+    ],
+    [
+      4,
+      5
+    ],
+    [
+      5,
+      6
+    ],
+    [
+      6,
+      7
+    ],
+    [
+      7,
+      8
+    ]
+  ],
+  "plus_input": [
+    [
+      10,
+      5
+    ],
+    [
+      0,
+      3
+    ],
+    [
+      25,
+      5
+    ],
+    [
+      8,
+      4
+    ],
+    [
+      48298461,
+      2
+    ],
+    [
+      2,
+      3
+    ]
+  ],
+  "atol": 0,
+  "contract": "\n    assert type(x) == int and type(base) == int, \"invalid inputs\" # $_CONTRACT_$\n    assert x >= 0, \"invalid inputs\" # $_CONTRACT_$\n    assert 2 <= base <= 9, \"invalid inputs\" # $_CONTRACT_$\n",
+  "entry_point": "change_base"
+}

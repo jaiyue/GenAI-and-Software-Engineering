@@ -1,0 +1,33 @@
+{
+  "base_input": [
+    [
+      3.5
+    ],
+    [
+      1.33
+    ],
+    [
+      123.456
+    ]
+  ],
+  "plus_input": [
+    [
+      999.99999
+    ],
+    [
+      0.04320870526393539
+    ],
+    [
+      1.0
+    ],
+    [
+      1e-323
+    ],
+    [
+      1000000000.0
+    ]
+  ],
+  "atol": 1e-06,
+  "contract": "\n    assert number > 0, \"invalid inputs\" # $_CONTRACT_$\n    assert isinstance(number, float), \"invalid inputs\" # $_CONTRACT_$\n    assert number != float(\"+inf\"), \"invalid inputs\" # $_CONTRACT_$\n",
+  "entry_point": "truncate_number"
+}

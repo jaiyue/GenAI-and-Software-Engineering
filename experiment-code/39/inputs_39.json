@@ -1,0 +1,45 @@
+{
+  "base_input": [
+    [
+      1
+    ],
+    [
+      2
+    ],
+    [
+      3
+    ],
+    [
+      4
+    ],
+    [
+      5
+    ],
+    [
+      6
+    ],
+    [
+      7
+    ],
+    [
+      8
+    ],
+    [
+      9
+    ],
+    [
+      10
+    ]
+  ],
+  "plus_input": [
+    [
+      11
+    ],
+    [
+      12
+    ]
+  ],
+  "atol": 0,
+  "contract": "\n    assert type(n) == int, \"invalid inputs\" # $_CONTRACT_$\n    assert 1 <= n <= 12, \"invalid inputs\" # $_CONTRACT_$\n",
+  "entry_point": "prime_fib"
+}

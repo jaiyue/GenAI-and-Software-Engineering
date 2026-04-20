@@ -1,0 +1,39 @@
+{
+  "base_input": [
+    [
+      ""
+    ],
+    [
+      "o o o o"
+    ],
+    [
+      ".| .| .| .|"
+    ],
+    [
+      "o| o| .| .| o o o o"
+    ],
+    [
+      "o| .| o| .| o o| o o|"
+    ]
+  ],
+  "plus_input": [
+    [
+      ".| .| o| o| o| o| .| .| o| o| o| o| o| o| o o o o"
+    ],
+    [
+      "o o| o| o|"
+    ],
+    [
+      ""
+    ],
+    [
+      "o"
+    ],
+    [
+      "o|"
+    ]
+  ],
+  "atol": 0,
+  "contract": "\n    assert isinstance(music_string, str), \"invalid inputs\" # $_CONTRACT_$\n    assert music_string == \"\" or all(map(lambda x: x in [\"o\", \"o|\", \".|\"], music_string.split(\" \"))), \"invalid inputs\" # $_CONTRACT_$\n",
+  "entry_point": "parse_music"
+}

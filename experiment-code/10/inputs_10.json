@@ -1,0 +1,45 @@
+{
+  "base_input": [
+    [
+      ""
+    ],
+    [
+      "x"
+    ],
+    [
+      "xyz"
+    ],
+    [
+      "xyx"
+    ],
+    [
+      "jerry"
+    ]
+  ],
+  "plus_input": [
+    [
+      "race"
+    ],
+    [
+      "level"
+    ],
+    [
+      "raracece"
+    ],
+    [
+      "raceredder"
+    ],
+    [
+      "abacabacaba"
+    ],
+    [
+      "rrefrerace"
+    ],
+    [
+      ""
+    ]
+  ],
+  "atol": 0,
+  "contract": "\n    assert type(string) == str, \"invalid inputs\" # $_CONTRACT_$\n",
+  "entry_point": "make_palindrome"
+}

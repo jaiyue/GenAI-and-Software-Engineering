@@ -1,0 +1,75 @@
+{
+  "base_input": [
+    [
+      "yogurt"
+    ],
+    [
+      "full"
+    ],
+    [
+      "easy"
+    ],
+    [
+      "eAsy"
+    ],
+    [
+      "ali"
+    ],
+    [
+      "bad"
+    ],
+    [
+      "most"
+    ],
+    [
+      "ab"
+    ],
+    [
+      "ba"
+    ],
+    [
+      "quick"
+    ],
+    [
+      "anime"
+    ],
+    [
+      "Asia"
+    ],
+    [
+      "Above"
+    ]
+  ],
+  "plus_input": [
+    [
+      "hello"
+    ],
+    [
+      "try"
+    ],
+    [
+      "bbkrtiyyiuykooxnne"
+    ],
+    [
+      "cup"
+    ],
+    [
+      "aabuum"
+    ],
+    [
+      "dSJxyzazbcDEFyiXDCfwPU"
+    ],
+    [
+      "zbcdafghijklmnoprstuvwxeyzzouzzza"
+    ],
+    [
+      "himute"
+    ],
+    [
+      "zbDEF"
+    ]
+  ],
+  "atol": 0,
+  "contract": "\n    assert isinstance(word, str), \"invalid inputs\" # $_CONTRACT_$\n    assert word == \"\" or word.isalpha(), \"invalid inputs\" # $_CONTRACT_$\n",
+  "entry_point": "get_closest_vowel"
+}

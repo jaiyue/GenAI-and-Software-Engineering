@@ -1,0 +1,45 @@
+{
+  "base_input": [
+    [
+      "This is a test"
+    ],
+    [
+      "lets go for swimming"
+    ],
+    [
+      "there is no place available here"
+    ],
+    [
+      "Hi I am Hussein"
+    ],
+    [
+      "go for it"
+    ],
+    [
+      "here"
+    ],
+    [
+      "here is"
+    ]
+  ],
+  "plus_input": [
+    [
+      "I am a developer"
+    ],
+    [
+      "Python programming is fun"
+    ],
+    [
+      "I am a dquick sort algorithm is efficienteveloper"
+    ],
+    [
+      "mahthematics can bI athe qurown fox jumps over the lazy dogm a developethse q the lazy dog asy"
+    ],
+    [
+      "abcdefghijklmnopqrstuvwxyz abc defghijklmnopqrstuvwxyz"
+    ]
+  ],
+  "atol": 0,
+  "contract": "\n    assert isinstance(sentence, str), \"invalid inputs\" # $_CONTRACT_$\n    assert 1 <= len(sentence) <= 100, \"invalid inputs\" # $_CONTRACT_$\n    assert \"  \" not in sentence, \"invalid inputs\" # $_CONTRACT_$\n    assert all(word.isalpha() for word in sentence.split(\" \")), \"invalid inputs\" # $_CONTRACT_$\n",
+  "entry_point": "words_in_sentence"
+}

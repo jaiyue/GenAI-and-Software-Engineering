@@ -1,0 +1,73 @@
+{
+  "base_input": [
+    [
+      "Jupiter",
+      "Neptune"
+    ],
+    [
+      "Jupiter",
+      "Neptune"
+    ],
+    [
+      "Earth",
+      "Mercury"
+    ],
+    [
+      "Earth",
+      "Mercury"
+    ],
+    [
+      "Mercury",
+      "Uranus"
+    ],
+    [
+      "Mercury",
+      "Uranus"
+    ],
+    [
+      "Neptune",
+      "Venus"
+    ],
+    [
+      "Neptune",
+      "Venus"
+    ],
+    [
+      "Earth",
+      "Earth"
+    ],
+    [
+      "Mars",
+      "Earth"
+    ],
+    [
+      "Jupiter",
+      "Makemake"
+    ]
+  ],
+  "plus_input": [
+    [
+      "Neptune",
+      "Mercury"
+    ],
+    [
+      "Pluto",
+      "Mars"
+    ],
+    [
+      "Earth",
+      "MerVenuscury"
+    ],
+    [
+      "Earth",
+      "Earth"
+    ],
+    [
+      "Mercury",
+      "Saturn"
+    ]
+  ],
+  "atol": 0,
+  "contract": "\n    assert isinstance(planet1, str) and isinstance(planet2, str), \"invalid inputs\" # $_CONTRACT_$\n",
+  "entry_point": "bf"
+}

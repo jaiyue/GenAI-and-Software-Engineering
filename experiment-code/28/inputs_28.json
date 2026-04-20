@@ -1,0 +1,64 @@
+{
+  "base_input": [
+    [
+      []
+    ],
+    [
+      [
+        "x",
+        "y",
+        "z"
+      ]
+    ],
+    [
+      [
+        "x",
+        "y",
+        "z",
+        "w",
+        "k"
+      ]
+    ]
+  ],
+  "plus_input": [
+    [
+      [
+        "apple",
+        "banana",
+        "orange"
+      ]
+    ],
+    [
+      []
+    ],
+    [
+      [
+        " "
+      ]
+    ],
+    [
+      [
+        "How",
+        "",
+        "much",
+        "wood",
+        "a",
+        "woodchuck",
+        "chuck",
+        "\ud83e\uddd0",
+        "a",
+        "could",
+        "chuck",
+        "wood"
+      ]
+    ],
+    [
+      [
+        "Hello, World!"
+      ]
+    ]
+  ],
+  "atol": 0,
+  "contract": "\n    assert all(isinstance(s, str) for s in strings), \"invalid inputs\" # $_CONTRACT_$\n    assert isinstance(strings, list), \"invalid inputs\" # $_CONTRACT_$\n",
+  "entry_point": "concatenate"
+}

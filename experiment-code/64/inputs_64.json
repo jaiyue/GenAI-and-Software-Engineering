@@ -1,0 +1,23 @@
+{
+  "base_input": [
+    ["abcde"],
+    ["Alone"],
+    ["key"],
+    ["bye"],
+    ["keY"],
+    ["bYe"],
+    ["ACEDY"]
+  ],
+  "plus_input": [
+    ["hello"],
+    [""],
+    ["aAEIOUYXWouy"],
+    ["AEIOUYX"],
+    ["iaeaeiouyfacetiousnessioAEIOUYYXWouy"],
+    ["Y"],
+    ["candaeioyoyynad"]
+  ],
+  "atol": 0,
+  "contract": "\n    assert type(s) == str, \"invalid inputs\" # $_CONTRACT_$\n",
+  "entry_point": "vowels_count"
+}

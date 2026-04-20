@@ -1,0 +1,110 @@
+{
+  "base_input": [
+    [
+      [],
+      "john"
+    ],
+    [
+      [
+        "xxx",
+        "asd",
+        "xxy",
+        "john doe",
+        "xxxAAA",
+        "xxx"
+      ],
+      "xxx"
+    ],
+    [
+      [
+        "xxx",
+        "asd",
+        "aaaxxy",
+        "john doe",
+        "xxxAAA",
+        "xxx"
+      ],
+      "xx"
+    ],
+    [
+      [
+        "grunt",
+        "trumpet",
+        "prune",
+        "gruesome"
+      ],
+      "run"
+    ]
+  ],
+  "plus_input": [
+    [
+      [
+        "banana",
+        "apple",
+        "kiwi",
+        "peach"
+      ],
+      "a"
+    ],
+    [
+      [
+        "Washington",
+        "DC",
+        "New York City",
+        "Boston",
+        "Los Angeles",
+        "San Francisco",
+        "Miami"
+      ],
+      "an"
+    ],
+    [
+      [
+        "",
+        "",
+        ""
+      ],
+      ""
+    ],
+    [
+      [
+        "abcdefg"
+      ],
+      "universally"
+    ],
+    [
+      [
+        "The Shawshank Redemption",
+        " The Godfather ",
+        "The Dark Knight",
+        "  The Lord of the Rings   ",
+        "   Star Wars",
+        " Inception     ",
+        "Forrest Gump"
+      ],
+      " "
+    ],
+    [
+      [
+        "fom",
+        "abcdefg"
+      ],
+      "fom"
+    ],
+    [
+      [
+        "Washington",
+        "DC",
+        "New York City",
+        "Boston",
+        "Los Angeles",
+        "San Francisco",
+        "Miami"
+      ],
+      "York"
+    ]
+  ],
+  "atol": 0,
+  "contract": "\n    assert type(strings) == list, \"invalid inputs\" # $_CONTRACT_$\n    assert all(type(x) == str for x in strings), \"invalid inputs\" # $_CONTRACT_$\n    assert isinstance(substring, str), \"invalid inputs\" # $_CONTRACT_$\n",
+  "entry_point": "filter_by_substring"
+}

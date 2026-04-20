@@ -1,0 +1,60 @@
+{
+  "base_input": [
+    [
+      ""
+    ],
+    [
+      "aba"
+    ],
+    [
+      "aaaaa"
+    ],
+    [
+      "zbcd"
+    ],
+    [
+      "xywyx"
+    ],
+    [
+      "xywyz"
+    ],
+    [
+      "xywzx"
+    ]
+  ],
+  "plus_input": [
+    [
+      "racecar"
+    ],
+    [
+      "ab"
+    ],
+    [
+      "12zZ21"
+    ],
+    [
+      "step on no pets"
+    ],
+    [
+      "SS"
+    ],
+    [
+      "never odd or even"
+    ],
+    [
+      ""
+    ],
+    [
+      " "
+    ],
+    [
+      "Step on no pets"
+    ],
+    [
+      "S"
+    ]
+  ],
+  "atol": 0,
+  "contract": "\n    assert isinstance(text, str), \"invalid inputs\" # $_CONTRACT_$\n",
+  "entry_point": "is_palindrome"
+}

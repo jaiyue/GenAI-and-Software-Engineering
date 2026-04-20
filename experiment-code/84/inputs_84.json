@@ -1,0 +1,33 @@
+{
+  "base_input": [
+    [
+      1000
+    ],
+    [
+      150
+    ],
+    [
+      147
+    ],
+    [
+      333
+    ],
+    [
+      963
+    ]
+  ],
+  "plus_input": [
+    [
+      1
+    ],
+    [
+      9999
+    ],
+    [
+      10
+    ]
+  ],
+  "atol": 0,
+  "contract": "\n    assert type(N) == int, \"invalid inputs\" # $_CONTRACT_$\n    assert 0 < N <= 10000, \"invalid inputs\" # $_CONTRACT_$\n",
+  "entry_point": "solve"
+}

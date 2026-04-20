@@ -1,0 +1,41 @@
+{
+  "base_input": [
+    [
+      2,
+      10
+    ],
+    [
+      10,
+      2
+    ],
+    [
+      132,
+      2
+    ],
+    [
+      17,
+      89
+    ]
+  ],
+  "plus_input": [
+    [
+      6,
+      12
+    ],
+    [
+      5,
+      4
+    ],
+    [
+      12,
+      5
+    ],
+    [
+      50,
+      60
+    ]
+  ],
+  "atol": 0,
+  "contract": "\n    assert type(a) == int and type(b) == int, \"invalid inputs\" # $_CONTRACT_$\n    assert a > 0 and b > 0, \"invalid inputs\" # $_CONTRACT_$\n",
+  "entry_point": "generate_integers"
+}

@@ -1,0 +1,60 @@
+{
+  "base_input": [
+    [
+      3
+    ],
+    [
+      7
+    ],
+    [
+      10
+    ],
+    [
+      100
+    ],
+    [
+      49
+    ]
+  ],
+  "plus_input": [
+    [
+      27
+    ],
+    [
+      101
+    ],
+    [
+      500
+    ],
+    [
+      1234571
+    ],
+    [
+      1234567
+    ],
+    [
+      1234570
+    ],
+    [
+      1234565
+    ],
+    [
+      35
+    ],
+    [
+      1234566
+    ],
+    [
+      1234569
+    ],
+    [
+      1234572
+    ],
+    [
+      2
+    ]
+  ],
+  "atol": 0,
+  "contract": "\n    assert type(n) == int, \"invalid inputs\" # $_CONTRACT_$\n    assert n > 1, \"invalid inputs\" # $_CONTRACT_$\n",
+  "entry_point": "largest_divisor"
+}

@@ -1,0 +1,45 @@
+{
+  "base_input": [
+    [
+      5
+    ],
+    [
+      54
+    ],
+    [
+      120
+    ],
+    [
+      5014
+    ],
+    [
+      98765
+    ],
+    [
+      5576543
+    ],
+    [
+      2468
+    ]
+  ],
+  "plus_input": [
+    [
+      182135
+    ],
+    [
+      246
+    ],
+    [
+      951
+    ],
+    [
+      952
+    ],
+    [
+      241
+    ]
+  ],
+  "atol": 0,
+  "contract": "\n    assert type(n) == int, \"invalid inputs\" # $_CONTRACT_$\n    assert n > 0, \"invalid inputs\" # $_CONTRACT_$\n",
+  "entry_point": "digits"
+}

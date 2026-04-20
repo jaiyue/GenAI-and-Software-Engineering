@@ -1,0 +1,54 @@
+{
+  "base_input": [
+    [
+      2
+    ],
+    [
+      4
+    ],
+    [
+      8
+    ],
+    [
+      57
+    ],
+    [
+      3249
+    ],
+    [
+      185193
+    ],
+    [
+      20577
+    ],
+    [
+      18
+    ]
+  ],
+  "plus_input": [
+    [
+      10
+    ],
+    [
+      1024
+    ],
+    [
+      15
+    ],
+    [
+      987654321
+    ],
+    [
+      112234372
+    ],
+    [
+      123456789
+    ],
+    [
+      11
+    ]
+  ],
+  "atol": 0,
+  "contract": "\n    assert type(n) == int, \"invalid inputs\" # $_CONTRACT_$\n    assert n >= 2, \"invalid inputs\" # $_CONTRACT_$\n",
+  "entry_point": "factorize"
+}

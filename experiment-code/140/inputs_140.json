@@ -1,0 +1,39 @@
+{
+  "base_input": [
+    [
+      "Example"
+    ],
+    [
+      "Mudasir Hanif "
+    ],
+    [
+      "Yellow Yellow  Dirty  Fellow"
+    ],
+    [
+      "Exa   mple"
+    ],
+    [
+      "   Exa 1 2 2 mple"
+    ]
+  ],
+  "plus_input": [
+    [
+      "Hello,   world!"
+    ],
+    [
+      "    "
+    ],
+    [
+      "Thish isThis is  a Hello r  World tsTesting     1  2   3 a  This is  a ssttesst"
+    ],
+    [
+      "Testing     1  2   3"
+    ],
+    [
+      "          "
+    ]
+  ],
+  "atol": 0,
+  "contract": "\n    assert isinstance(text, str), \"invalid inputs\" # $_CONTRACT_$\n",
+  "entry_point": "fix_spaces"
+}

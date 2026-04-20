@@ -1,0 +1,4 @@
+requests
+github-copilot-sdk
+python-decouple
+openjdk@17

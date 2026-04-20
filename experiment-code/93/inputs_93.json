@@ -1,0 +1,39 @@
+{
+  "base_input": [
+    [
+      "TEST"
+    ],
+    [
+      "Mudasir"
+    ],
+    [
+      "YES"
+    ],
+    [
+      "This is a message"
+    ],
+    [
+      "I DoNt KnOw WhAt tO WrItE"
+    ]
+  ],
+  "plus_input": [
+    [
+      "Python is awesome"
+    ],
+    [
+      "abcdefghijklmnopqrstuvwxyz"
+    ],
+    [
+      "ZYXWVUTSRQPONMLKJIHGFEDCBA"
+    ],
+    [
+      "to be or notZYXWVUTSRQPabcdefghijklmnopqrstuvwxyzONMLKJIABCDEFHGFEDCBA to be"
+    ],
+    [
+      "Every good boy does fine"
+    ]
+  ],
+  "atol": 0,
+  "contract": "\n    assert type(message) == str, \"invalid inputs\" # $_CONTRACT_$\n    assert all(ch == \" \" or ch.isalpha() for ch in message), \"invalid inputs\" # $_CONTRACT_$\n",
+  "entry_point": "encode"
+}

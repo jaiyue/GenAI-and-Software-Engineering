@@ -1,0 +1,37 @@
+{
+  "base_input": [
+    [
+      5,
+      3
+    ],
+    [
+      2,
+      2
+    ],
+    [
+      10,
+      8
+    ]
+  ],
+  "plus_input": [
+    [
+      4,
+      6
+    ],
+    [
+      0.09250267285921429,
+      1000
+    ],
+    [
+      7,
+      2
+    ],
+    [
+      5,
+      5
+    ]
+  ],
+  "atol": 0,
+  "contract": "\n    assert isinstance(a, (int, float)) and isinstance(h, (int, float)), \"invalid inputs\" # $_CONTRACT_$\n    assert a > 0 and h > 0, \"invalid inputs\" # $_CONTRACT_$\n",
+  "entry_point": "triangle_area"
+}

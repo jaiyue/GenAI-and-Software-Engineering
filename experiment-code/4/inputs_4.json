@@ -1,0 +1,73 @@
+{
+  "base_input": [
+    [
+      [
+        1.0,
+        2.0,
+        3.0
+      ]
+    ],
+    [
+      [
+        1.0,
+        2.0,
+        3.0,
+        4.0
+      ]
+    ],
+    [
+      [
+        1.0,
+        2.0,
+        3.0,
+        4.0,
+        5.0
+      ]
+    ]
+  ],
+  "plus_input": [
+    [
+      [
+        -1.0,
+        4.5,
+        0.0,
+        2.5,
+        -3.0
+      ]
+    ],
+    [
+      [
+        1.0,
+        1.0,
+        1.0,
+        2.0,
+        2.0,
+        2.0
+      ]
+    ],
+    [
+      [
+        0.0,
+        0.0,
+        0.0,
+        5.0,
+        0.0,
+        5.7682420395965925
+      ]
+    ],
+    [
+      [
+        1e+308
+      ]
+    ],
+    [
+      [
+        -2.0,
+        2.0
+      ]
+    ]
+  ],
+  "atol": 1e-06,
+  "contract": "\n    assert all(isinstance(x, float) for x in numbers), \"invalid inputs\" # $_CONTRACT_$\n    assert numbers != [], \"invalid inputs\" # $_CONTRACT_$\n",
+  "entry_point": "mean_absolute_deviation"
+}

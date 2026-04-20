@@ -1,0 +1,24 @@
+{
+  "base_input": [
+    [
+      "(()()) ((())) () ((())()())"
+    ],
+    [
+      "() (()) ((())) (((())))"
+    ],
+    [
+      "(()(())((())))"
+    ]
+  ],
+  "plus_input": [
+    [
+      "((()))"
+    ],
+    [
+      "(())(()(()))((()()))"
+    ]
+  ],
+  "atol": 0,
+  "contract": "\n    assert type(paren_string) == str, \"invalid inputs\" # $_CONTRACT_$\n    cnt = 0 # $_CONTRACT_$\n    for ch in paren_string: # $_CONTRACT_$\n        assert ch in [\"(\", \")\", \" \"], \"invalid inputs\"  # $_CONTRACT_$\n        if ch == \"(\": cnt += 1 # $_CONTRACT_$\n        if ch == \")\": cnt -= 1 # $_CONTRACT_$\n        assert cnt >= 0, \"invalid inputs\" # $_CONTRACT_$\n    assert cnt == 0, \"invalid inputs\"\n",
+  "entry_point": "parse_nested_parens"
+}

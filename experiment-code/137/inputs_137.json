@@ -1,0 +1,65 @@
+{
+  "base_input": [
+    [
+      1,
+      2
+    ],
+    [
+      1,
+      2.5
+    ],
+    [
+      2,
+      3
+    ],
+    [
+      5,
+      6
+    ],
+    [
+      1,
+      "2,3"
+    ],
+    [
+      "5,1",
+      "6"
+    ],
+    [
+      "1",
+      "2"
+    ],
+    [
+      "1",
+      1
+    ]
+  ],
+  "plus_input": [
+    [
+      3,
+      3
+    ],
+    [
+      -2.5,
+      2.5
+    ],
+    [
+      "5,000",
+      "5,000"
+    ],
+    [
+      1,
+      "1,45"
+    ],
+    [
+      10,
+      "10.0"
+    ],
+    [
+      "33",
+      "4,45"
+    ]
+  ],
+  "atol": 0,
+  "contract": "\n    assert isinstance(a, (int, float, str)), \"invalid inputs\" # $_CONTRACT_$\n    assert isinstance(b, (int, float, str)), \"invalid inputs\" # $_CONTRACT_$\n    try: # $_CONTRACT_$\n        float(str(a).replace(\",\", \".\")) # $_CONTRACT_$\n        float(str(b).replace(\",\", \".\")) # $_CONTRACT_$\n    except ValueError: raise Exception(\"invalid inputs\") # $_CONTRACT_$\n",
+  "entry_point": "compare_one"
+}

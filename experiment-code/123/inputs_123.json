@@ -1,0 +1,39 @@
+{
+  "base_input": [
+    [
+      14
+    ],
+    [
+      5
+    ],
+    [
+      12
+    ],
+    [
+      1
+    ]
+  ],
+  "plus_input": [
+    [
+      2
+    ],
+    [
+      3
+    ],
+    [
+      9999999999999999999999999999999999
+    ],
+    [
+      1
+    ],
+    [
+      7
+    ],
+    [
+      9999999999999999999999999999999998
+    ]
+  ],
+  "atol": 0,
+  "contract": "\n    assert type(n) == int, \"invalid inputs\" # $_CONTRACT_$\n    assert n > 0, \"invalid inputs\" # $_CONTRACT_$\n",
+  "entry_point": "get_odd_collatz"
+}

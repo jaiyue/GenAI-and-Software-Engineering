@@ -1,0 +1,42 @@
+{
+  "base_input": [
+    [
+      50
+    ],
+    [
+      78
+    ],
+    [
+      79
+    ],
+    [
+      100
+    ],
+    [
+      200
+    ],
+    [
+      4000
+    ],
+    [
+      10000
+    ],
+    [
+      100000
+    ]
+  ],
+  "plus_input": [
+    [
+      10
+    ],
+    [
+      555555
+    ],
+    [
+      77
+    ]
+  ],
+  "atol": 0,
+  "contract": "\n    assert type(n) == int and n > 0, \"invalid inputs\" # $_CONTRACT_$\n",
+  "entry_point": "fizz_buzz"
+}

@@ -1,0 +1,53 @@
+{
+  "base_input": [
+    [
+      "5 apples and 6 oranges",
+      19
+    ],
+    [
+      "5 apples and 6 oranges",
+      21
+    ],
+    [
+      "0 apples and 1 oranges",
+      3
+    ],
+    [
+      "1 apples and 0 oranges",
+      3
+    ],
+    [
+      "2 apples and 3 oranges",
+      100
+    ],
+    [
+      "2 apples and 3 oranges",
+      5
+    ],
+    [
+      "1 apples and 100 oranges",
+      120
+    ]
+  ],
+  "plus_input": [
+    [
+      "10 apples and 20 oranges",
+      30
+    ],
+    [
+      "10 apples and 20 oranges",
+      51
+    ],
+    [
+      "10 apples and 20 oranges",
+      50
+    ],
+    [
+      "0 apples and 0 oranges",
+      10
+    ]
+  ],
+  "atol": 0,
+  "contract": "\n    assert type(s) == str and type(n) == int, \"invalid inputs\" # $_CONTRACT_$\n    words = s.split(\" \") # $_CONTRACT_$\n    assert len(words) == 5, \"invalid inputs\" # $_CONTRACT_$\n    assert words[1] == \"apples\" and words[2] == \"and\" and words[4] == \"oranges\", \"invalid inputs\" # $_CONTRACT_$\n    assert words[0].isdigit() and words[3].isdigit(), \"invalid inputs\" # $_CONTRACT_$\n",
+  "entry_point": "fruit_distribution"
+}

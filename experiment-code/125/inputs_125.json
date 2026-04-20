@@ -1,0 +1,48 @@
+{
+  "base_input": [
+    [
+      "Hello world!"
+    ],
+    [
+      "Hello,world!"
+    ],
+    [
+      "Hello world,!"
+    ],
+    [
+      "Hello,Hello,world !"
+    ],
+    [
+      "abcdef"
+    ],
+    [
+      "aaabb"
+    ],
+    [
+      "aaaBb"
+    ],
+    [
+      ""
+    ]
+  ],
+  "plus_input": [
+    [
+      "Hello?"
+    ],
+    [
+      "abc deg"
+    ],
+    [
+      "aaa,bbb"
+    ],
+    [
+      "wOWbbX"
+    ],
+    [
+      "ababc123"
+    ]
+  ],
+  "atol": 0,
+  "contract": "\n    assert type(txt) == str, \"invalid inputs\" # $_CONTRACT_$\n    assert not txt.startswith(\" \") and not txt.startswith(\",\") and not txt.endswith(\" \") and not txt.endswith(\",\"), \"invalid inputs\" # $_CONTRACT_$\n",
+  "entry_point": "split_words"
+}

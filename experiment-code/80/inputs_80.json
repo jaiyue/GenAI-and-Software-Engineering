@@ -1,0 +1,75 @@
+{
+  "base_input": [
+    [
+      "a"
+    ],
+    [
+      "aa"
+    ],
+    [
+      "abcd"
+    ],
+    [
+      "aabb"
+    ],
+    [
+      "adb"
+    ],
+    [
+      "xyy"
+    ],
+    [
+      "iopaxpoi"
+    ],
+    [
+      "iopaxioi"
+    ]
+  ],
+  "plus_input": [
+    [
+      "xyz"
+    ],
+    [
+      "agbebf"
+    ],
+    [
+      "xy"
+    ],
+    [
+      "xxy"
+    ],
+    [
+      " this is hb"
+    ],
+    [
+      "tibacacbacbm"
+    ],
+    [
+      "baUee"
+    ],
+    [
+      "abcdefghijklmde"
+    ],
+    [
+      "cabcabc"
+    ],
+    [
+      "bacacbacb"
+    ],
+    [
+      " this is bat"
+    ],
+    [
+      "x"
+    ],
+    [
+      "yyyyyy"
+    ],
+    [
+      "qwertyuiopasdfghjklzxcvbnmqwertlyuiopasdfghjklzxcvbqwertyuiopasdfghjklzxcvbnmqwertyabcabuiopasdfghjkaaaaabbbdddccccaaeeeedddccccaabcabcabcabcabcabbcabcabcabcacbcaaaaabbbbccccdeeeddddccccbbbbaaaaaaaabbbbccccdeeeddddccccbbbbaaaaeeeedddccccaaeeeedddccccaabcabcabcabcabcabcabcabcabcabcabcabcaabcabbcabcabcababcabbcabcabcababcabbbaaaaaaaabbbbccccdeeeddddccabcabcaabcccaaabbddeefffbcabcaabcabcabcabcabcabcabcabcabcabcabcabcabccb11223344556abcabcabcabcabcabcabcabcabcabaaaaabbbbccccdeeeddddccccbbbbaaaaaaaabbbbccccdeeeddddccccbbbbaaaaeeeedddccccaaeeeedddccccacabcabcabcabbcabcabcab65677889900aad4dbbccddeeaabbccddeebbbaaaaeeeedddccccaaeeeedddccccalzxcvb"
+    ]
+  ],
+  "atol": 0,
+  "contract": "\n    assert type(s) == str, \"invalid inputs\" # $_CONTRACT_$\n",
+  "entry_point": "is_happy"
+}

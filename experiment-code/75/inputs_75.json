@@ -1,0 +1,39 @@
+{
+  "base_input": [
+    [
+      5
+    ],
+    [
+      30
+    ],
+    [
+      8
+    ],
+    [
+      10
+    ]
+  ],
+  "plus_input": [
+    [
+      33
+    ],
+    [
+      -98
+    ],
+    [
+      2
+    ],
+    [
+      98
+    ],
+    [
+      99
+    ],
+    [
+      -56
+    ]
+  ],
+  "atol": 0,
+  "contract": "\n    assert type(a) == int, \"invalid inputs\" # $_CONTRACT_$\n    assert a < 100, \"invalid inputs\" # $_CONTRACT_$\n",
+  "entry_point": "is_multiply_prime"
+}

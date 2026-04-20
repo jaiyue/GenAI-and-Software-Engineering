@@ -1,0 +1,48 @@
+{
+  "base_input": [
+    [
+      7
+    ],
+    [
+      -78
+    ],
+    [
+      3452
+    ],
+    [
+      346211
+    ],
+    [
+      -345821
+    ],
+    [
+      -2
+    ],
+    [
+      -45347
+    ],
+    [
+      0
+    ]
+  ],
+  "plus_input": [
+    [
+      2368
+    ],
+    [
+      -2468031
+    ],
+    [
+      0
+    ],
+    [
+      -7
+    ],
+    [
+      -1
+    ]
+  ],
+  "atol": 0,
+  "contract": "\n    assert type(num) == int, \"invalid inputs\" # $_CONTRACT_$\n",
+  "entry_point": "even_odd_count"
+}

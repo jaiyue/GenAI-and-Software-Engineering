@@ -1,0 +1,81 @@
+{
+  "base_input": [
+    [
+      "abcde",
+      "ae"
+    ],
+    [
+      "abcdef",
+      "b"
+    ],
+    [
+      "abcdedcba",
+      "ab"
+    ],
+    [
+      "dwik",
+      "w"
+    ],
+    [
+      "a",
+      "a"
+    ],
+    [
+      "abcdedcba",
+      ""
+    ],
+    [
+      "abcdedcba",
+      "v"
+    ],
+    [
+      "vabba",
+      "v"
+    ],
+    [
+      "mamma",
+      "mia"
+    ]
+  ],
+  "plus_input": [
+    [
+      "racecar",
+      "ace"
+    ],
+    [
+      "bc",
+      "ervee"
+    ],
+    [
+      "dveeifieacced",
+      "dveeified"
+    ],
+    [
+      "ave",
+      "ve"
+    ],
+    [
+      "",
+      "ve"
+    ],
+    [
+      "ne",
+      ""
+    ],
+    [
+      "XtMIzX",
+      "xllmeyz"
+    ],
+    [
+      "level",
+      "ve"
+    ],
+    [
+      "radar",
+      ""
+    ]
+  ],
+  "atol": 0,
+  "contract": "\n    assert isinstance(s, str) and isinstance(c, str), \"invalid inputs\" # $_CONTRACT_$\n",
+  "entry_point": "reverse_delete"
+}

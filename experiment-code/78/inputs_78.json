@@ -1,0 +1,69 @@
+{
+  "base_input": [
+    [
+      "AB"
+    ],
+    [
+      "AB"
+    ],
+    [
+      "1077E"
+    ],
+    [
+      "1077E"
+    ],
+    [
+      "ABED1A33"
+    ],
+    [
+      "ABED1A33"
+    ],
+    [
+      "2020"
+    ],
+    [
+      "2020"
+    ],
+    [
+      "123456789ABCDEF0"
+    ],
+    [
+      "123456789ABCDEF0"
+    ],
+    [
+      "112233445566778899AABBCCDDEEFF00"
+    ],
+    [
+      "112233445566778899AABBCCDDEEFF00"
+    ],
+    [
+      []
+    ]
+  ],
+  "plus_input": [
+    [
+      "ABCDEF"
+    ],
+    [
+      "ACDF12345B67C2022EEEFAD890ABCDEF12345BBAA202001111887215E753BD9CEFF23BCCBBD4"
+    ],
+    [
+      {}
+    ],
+    [
+      "67ABCD23"
+    ],
+    [
+      "11111777777"
+    ],
+    [
+      "679D99999ABCD23"
+    ],
+    [
+      "1"
+    ]
+  ],
+  "atol": 0,
+  "contract": "\n    assert all(x in \"0123456789ABCDEF\" for x in num), \"invalid inputs\" # $_CONTRACT_$\n",
+  "entry_point": "hex_key"
+}

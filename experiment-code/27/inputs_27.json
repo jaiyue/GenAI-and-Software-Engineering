@@ -1,0 +1,30 @@
+{
+  "base_input": [
+    [
+      ""
+    ],
+    [
+      "Hello!"
+    ],
+    [
+      "These violent delights have violent ends"
+    ]
+  ],
+  "plus_input": [
+    [
+      "123abc"
+    ],
+    [
+      "\u041a\u0430\u0440\u043b \u0443 \u041a\u043b\u0430\u0440\u044b \u0443\u043a\u0440\u0430\u043b \u043a\u043e\u0440\u0430\u043b\u043b\u044b, \u0430 \u041a \u043b\u0430\u0440\u0430 \u0443 \u041a\u0443\u0430\u0440\u043b\u0430 \u0443\u043a\u0440\u0430\u043b\u0430 \u043a\u043b\u0430\u0440\u043d\u0435\u0442tThe Quick Brown FOX JUMP\u03bc\u03c7\u1fc3S Over the lazy dog\u098f\u098f\u099f\u09bf \u098f\u0995\u099f\u09bf \u09a3\u0989\u09a6\u09be\u09b9\u09b0\u09a3\u0995\u09cdt\u09cd\u09a4 \u0995p\u09aeo co.\u09cd\u09b7\u09c7\u09a4\u09cd\u09b0HeS\u00ed,\u043b\u0430\u0440\u0430"
+    ],
+    [
+      ""
+    ],
+    [
+      "re\u041a\u0430\u0440\u043b \u0443 \u041a\u043b\u0430\u0440\u044b \u0443\u043a\u0440\u0430\u043b \u043a\u043e\u0440\u0430\u043b\u043b\u044b, \u0430 "
+    ]
+  ],
+  "atol": 0,
+  "contract": "\n    assert type(string) == str, \"invalid inputs\" # $_CONTRACT_$\n",
+  "entry_point": "flip_case"
+}

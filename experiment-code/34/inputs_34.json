@@ -1,0 +1,60 @@
+{
+  "base_input": [
+    [
+      [
+        5,
+        3,
+        5,
+        2,
+        3,
+        3,
+        9,
+        0,
+        123
+      ]
+    ]
+  ],
+  "plus_input": [
+    [
+      [
+        3.4145447979043606,
+        1.5142493540603779,
+        1.1,
+        2.2,
+        2.2,
+        4.4,
+        4.4,
+        3.0219968583931567,
+        2.2
+      ]
+    ],
+    [
+      [
+        null,
+        null,
+        null,
+        null
+      ]
+    ],
+    [
+      []
+    ],
+    [
+      [
+        -1,
+        1
+      ]
+    ],
+    [
+      [
+        "alQd",
+        "dapple",
+        "banana",
+        "oralQdnge"
+      ]
+    ]
+  ],
+  "atol": 0,
+  "contract": "\n    assert type(l) == list, \"invalid inputs\" # $_CONTRACT_$\n",
+  "entry_point": "unique"
+}

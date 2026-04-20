@@ -1,0 +1,54 @@
+{
+  "base_input": [
+    [
+      "aBCdEf"
+    ],
+    [
+      "abcdefg"
+    ],
+    [
+      "dBBE"
+    ],
+    [
+      "B"
+    ],
+    [
+      "U"
+    ],
+    [
+      ""
+    ],
+    [
+      "EEEE"
+    ]
+  ],
+  "plus_input": [
+    [
+      "abcDEf"
+    ],
+    [
+      "DbdOH"
+    ],
+    [
+      "zbvuyrwqpmlkjhgfedcbaZXJUTSRPONMLKI"
+    ],
+    [
+      "AfbCdEOhhEEAbCdEIfGhIjKlabcDEfMnOpQrStUvWxYzrrRRStUvWxCDbdOHUOIEAABCDYz"
+    ],
+    [
+      "A"
+    ],
+    [
+      "uEi"
+    ],
+    [
+      ""
+    ],
+    [
+      "z"
+    ]
+  ],
+  "atol": 0,
+  "contract": "\n    assert type(s) == str, \"invalid inputs\" # $_CONTRACT_$\n",
+  "entry_point": "count_upper"
+}

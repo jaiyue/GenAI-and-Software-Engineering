@@ -1,0 +1,65 @@
+{
+  "base_input": [
+    [
+      100,
+      2
+    ],
+    [
+      12,
+      2
+    ],
+    [
+      97,
+      8
+    ],
+    [
+      12,
+      1
+    ],
+    [
+      11,
+      101
+    ]
+  ],
+  "plus_input": [
+    [
+      341209,
+      4
+    ],
+    [
+      16,
+      3
+    ],
+    [
+      987654321,
+      9
+    ],
+    [
+      345,
+      1
+    ],
+    [
+      500,
+      4
+    ],
+    [
+      1234567890987654324,
+      0
+    ],
+    [
+      23,
+      789456124
+    ],
+    [
+      10,
+      1
+    ],
+    [
+      0,
+      1000
+    ]
+  ],
+  "atol": 0,
+  "contract": "\n    assert type(x) == type(shift) == int, \"invalid inputs\" # $_CONTRACT_$\n    assert x >= 0 and shift >= 0, \"invalid inputs\" # $_CONTRACT_$\n",
+  "entry_point": "circular_shift"
+}

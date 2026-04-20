@@ -1,0 +1,51 @@
+{
+  "base_input": [
+    [
+      ""
+    ],
+    [
+      "abAB"
+    ],
+    [
+      "abcCd"
+    ],
+    [
+      "helloE"
+    ],
+    [
+      "woArBld"
+    ],
+    [
+      "aAaaaXa"
+    ],
+    [
+      " How are yOu?"
+    ],
+    [
+      "You arE Very Smart"
+    ]
+  ],
+  "plus_input": [
+    [
+      "123"
+    ],
+    [
+      "abcd1123A12:;<=>?@[\\]^_`{|}~ABC123def456GHI3BCD"
+    ],
+    [
+      "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    ],
+    [
+      "A"
+    ],
+    [
+      "a"
+    ],
+    [
+      ""
+    ]
+  ],
+  "atol": 0,
+  "contract": "\n    assert type(s) == str, \"invalid inputs\" # $_CONTRACT_$\n",
+  "entry_point": "digitSum"
+}

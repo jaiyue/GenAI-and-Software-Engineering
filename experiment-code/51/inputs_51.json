@@ -1,0 +1,45 @@
+{
+  "base_input": [
+    [
+      ""
+    ],
+    [
+      "abcdef\nghijklm"
+    ],
+    [
+      "fedcba"
+    ],
+    [
+      "eeeee"
+    ],
+    [
+      "acBAA"
+    ],
+    [
+      "EcBOO"
+    ],
+    [
+      "ybcd"
+    ]
+  ],
+  "plus_input": [
+    [
+      "hello"
+    ],
+    [
+      "CX"
+    ],
+    [
+      "The quick brown AEEIayoubcd\n\n\n\nefghijklmnopqrstuvwxyzOUaeHdo.elHlofox jumps over the lazyog."
+    ],
+    [
+      "\n"
+    ],
+    [
+      "a"
+    ]
+  ],
+  "atol": 0,
+  "contract": "\n    assert type(text) == str, \"invalid inputs\" # $_CONTRACT_$\n",
+  "entry_point": "remove_vowels"
+}

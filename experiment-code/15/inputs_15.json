@@ -1,0 +1,39 @@
+{
+  "base_input": [
+    [
+      0
+    ],
+    [
+      3
+    ],
+    [
+      10
+    ]
+  ],
+  "plus_input": [
+    [
+      1
+    ],
+    [
+      1000006
+    ],
+    [
+      1000010
+    ],
+    [
+      0
+    ],
+    [
+      1000011
+    ],
+    [
+      1000002
+    ],
+    [
+      1000000
+    ]
+  ],
+  "atol": 0,
+  "contract": "\n    assert type(n) == int, \"invalid inputs\" # $_CONTRACT_$\n    assert n >= 0, \"invalid inputs\" # $_CONTRACT_$\n",
+  "entry_point": "string_sequence"
+}

@@ -1,0 +1,45 @@
+{
+  "base_input": [
+    [
+      2
+    ],
+    [
+      1
+    ],
+    [
+      5
+    ],
+    [
+      8
+    ],
+    [
+      10
+    ],
+    [
+      12
+    ],
+    [
+      14
+    ]
+  ],
+  "plus_input": [
+    [
+      20
+    ],
+    [
+      0
+    ],
+    [
+      2
+    ],
+    [
+      1
+    ],
+    [
+      25
+    ]
+  ],
+  "atol": 0,
+  "contract": "\n    assert isinstance(n, int), \"invalid inputs\" # $_CONTRACT_$\n    assert n >= 0, \"invalid inputs\" # $_CONTRACT_$\n",
+  "entry_point": "fibfib"
+}

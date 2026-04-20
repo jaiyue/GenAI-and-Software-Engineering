@@ -1,0 +1,73 @@
+{
+  "base_input": [
+    [
+      "eabcdzzzz",
+      "dddzzzzzzzddeddabc"
+    ],
+    [
+      "abcd",
+      "dddddddabc"
+    ],
+    [
+      "dddddddabc",
+      "abcd"
+    ],
+    [
+      "eabcd",
+      "dddddddabc"
+    ],
+    [
+      "abcd",
+      "dddddddabcf"
+    ],
+    [
+      "eabcdzzzz",
+      "dddzzzzzzzddddabc"
+    ],
+    [
+      "aabb",
+      "aaccc"
+    ]
+  ],
+  "plus_input": [
+    [
+      "ab",
+      "cd"
+    ],
+    [
+      "123445",
+      "5143241"
+    ],
+    [
+      "ZYXWVUTSRQPONMLKJIHGFEDCBA",
+      "ZjumpsYXWVUTSRQPONMLKJIHGFEDCBA"
+    ],
+    [
+      "123445",
+      ""
+    ],
+    [
+      "foStrongrce",
+      "gazelle!own"
+    ],
+    [
+      "12345607890",
+      "0987654321"
+    ],
+    [
+      "524321",
+      "5432"
+    ],
+    [
+      "ZeZeZeZeZeZeZeZeZeZeZeZeZeZ,eZeZeZeZeZeZeZeZeZeZeZeZeZeZeZeZeZeZeZeZeZeZeZeZeZeZeZe",
+      "ZeZeZeZeZeZeZeZeZeZeZeZeZeZeZeZeZeZeZeZeZeZeZeZeZeZeZeZeZeZeZeZeZeZeZeZeZeZeZeZeZe"
+    ],
+    [
+      "",
+      "the"
+    ]
+  ],
+  "atol": 0,
+  "contract": "\n    assert type(s0) == type(s1) == str, \"invalid inputs\" # $_CONTRACT_$\n",
+  "entry_point": "same_chars"
+}

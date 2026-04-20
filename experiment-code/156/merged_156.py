@@ -1,0 +1,22 @@
+def int_to_mini_roman(number):
+    """
+    Given a positive integer, obtain its roman numeral equivalent as a string,
+    and return it in lowercase.
+    Restrictions: 1 <= num <= 1000
+    """
+    if not isinstance(number, int) or number < 1 or number > 1000:
+        raise ValueError("number must be an integer in the range 1..1000")
+
+    vals = [
+        (1000, "M"), (900, "CM"), (500, "D"), (400, "CD"),
+        (100, "C"), (90, "XC"), (50, "L"), (40, "XL"),
+        (10, "X"), (9, "IX"), (5, "V"), (4, "IV"), (1, "I"),
+    ]
+    res = []
+    n = number
+    for val, sym in vals:
+        if n == 0:
+            break
+        count, n = divmod(n, val)
+        res.append(sym * count)
+    return "".join(res).lower()

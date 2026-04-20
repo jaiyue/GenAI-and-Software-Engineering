@@ -1,0 +1,65 @@
+{
+  "base_input": [
+    [
+      "",
+      "x"
+    ],
+    [
+      "xyxyxyx",
+      "x"
+    ],
+    [
+      "cacacacac",
+      "cac"
+    ],
+    [
+      "john doe",
+      "john"
+    ]
+  ],
+  "plus_input": [
+    [
+      "ababa",
+      "aba"
+    ],
+    [
+      "zz",
+      "bbb"
+    ],
+    [
+      "aaaaabbbbaaaa",
+      "aaa"
+    ],
+    [
+      "hello world",
+      "o"
+    ],
+    [
+      "",
+      "adipiscilang"
+    ],
+    [
+      "AAAAaaaaaaaabaaaaaaaAAA",
+      "AAAAAAA"
+    ],
+    [
+      "aaaabbbcbcccc",
+      "hello woorrld"
+    ],
+    [
+      "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB",
+      "AAAAAAA"
+    ],
+    [
+      " ",
+      " "
+    ],
+    [
+      "12211221122",
+      "122"
+    ]
+  ],
+  "atol": 0,
+  "contract": "\n    assert isinstance(string, str) and isinstance(substring, str), \"invalid inputs\" # $_CONTRACT_$\n    assert substring != \"\", \"invalid inputs\" # $_CONTRACT_$\n",
+  "entry_point": "how_many_times"
+}

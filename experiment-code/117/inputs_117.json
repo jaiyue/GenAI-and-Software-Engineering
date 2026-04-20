@@ -1,0 +1,85 @@
+{
+  "base_input": [
+    [
+      "Mary had a little lamb",
+      4
+    ],
+    [
+      "Mary had a little lamb",
+      4
+    ],
+    [
+      "Mary had a little lamb",
+      3
+    ],
+    [
+      "Mary had a little lamb",
+      3
+    ],
+    [
+      "simple white space",
+      2
+    ],
+    [
+      "simple white space",
+      2
+    ],
+    [
+      "Hello world",
+      4
+    ],
+    [
+      "Hello world",
+      4
+    ],
+    [
+      "Uncle sam",
+      3
+    ],
+    [
+      "Uncle sam",
+      3
+    ],
+    [
+      "",
+      4
+    ],
+    [
+      "",
+      4
+    ],
+    [
+      "a b c d e f",
+      1
+    ],
+    [
+      "a b c d e f",
+      1
+    ]
+  ],
+  "plus_input": [
+    [
+      "the quick brown fox jumps  og",
+      1
+    ],
+    [
+      "",
+      1
+    ],
+    [
+      "Python isp a popular programminPython isp a populathis is a test string with multiplePython isp a popular program ming language words containing different numbers of consonants programming  languagePython is a popular progrmming languageg language",
+      0
+    ],
+    [
+      "ThE qUiCk BrOwN fOx JuMpS oVPython isp a popular program ming languageeR tHe LaZy DoG",
+      5
+    ],
+    [
+      "apple banana cherry",
+      3
+    ]
+  ],
+  "atol": 0,
+  "contract": "\n    assert isinstance(s, str), \"invalid inputs\" # $_CONTRACT_$\n    assert all(ch == \" \" or ch.isalpha() for ch in s), \"invalid inputs\" # $_CONTRACT_$\n    assert type(n) == int, \"invalid inputs\" # $_CONTRACT_$\n    assert n >= 0, \"invalid inputs\" # $_CONTRACT_$\n",
+  "entry_point": "select_words"
+}
