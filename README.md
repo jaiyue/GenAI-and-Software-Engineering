@@ -1,5 +1,22 @@
 # GenAI-and-Software-Engineering
 
+# Requirements:
+
+- `python-decouple` package:
+- SonarQube API token and OpenAI API key (both required by the scripts).
+
+Location:
+
+- Place the SonarQube token in the repository root `.env` file as:
+  ```text
+  SONAR_TOKEN=your_new_token_here
+  ```
+- The bundled SonarQube scanner is expected at:
+  ```text
+  ./sonar-scanner-8.0.1.6346-macosx-aarch64/bin/sonar-scanner
+  ```
+  (If you installed the scanner elsewhere, update the scanner path in `sonarqube.py`.)
+
 ## HumanEvalPlus-Mini Dataset Extraction Guide
 
 This section describes how to obtain the **HumanEvalPlus-Mini** dataset from the EvalPlus framework **without performing any model evaluation or program execution**.
@@ -77,9 +94,23 @@ After the dataset file has been successfully generated, move it to the parent di
 mv humanevalplus_mini.jsonl ..
 ```
 
-
 After this step, the file will be located at:
 
 ```text
 ../humanevalplus_mini.jsonl
 ```
+
+### Step 7: Run the Full Pipeline
+
+Run the project in the following order:
+
+Before running the pipeline, update the SonarQube project ID in [sonarqube.py](sonarqube.py) at the `project_name = "project"` line inside `run_sonarqube_eval()`.
+
+1. Run `preparation.py`
+2. Run `generation.py`
+3. Open a new terminal and start the SonarQube server
+4. Wait until you see `SonarQube is operational`
+5. Run `experiment.py`
+6. Run `evaluate_results.py`
+
+This order is required so that the generated files, results, and SonarQube metrics are produced correctly.

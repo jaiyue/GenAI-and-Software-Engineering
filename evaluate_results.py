@@ -225,15 +225,34 @@ def analyze_sonarqube_metrics(path):
 
 def plot_correctness_bar_charts(path):
     case_counts = calculate_different_correctness_cases(path)
-    percentage_counts = calculate_correctness_by_percentage(path)
+    matrix = []
+    with open(path + "/results/results.csv", "r") as f:
+        csv_reader = reader(f)
+        for row in csv_reader:
+            matrix.append(row)
 
     case_labels = ["Correct", "Incorrect", "Partially Correct"]
-    percentage_labels = ["75-95", "50-75", "25-50", "0-25"]
     total_cases = sum(case_counts)
     case_legend_labels = [
         f"{label} = {(count / total_cases * 100):.1f}%" if total_cases else f"{label} = 0.0%"
         for label, count in zip(case_labels, case_counts)
     ]
+
+    partial_ids = []
+    partial_correctness_rates = []
+    for i in range(1, NUMBER_OF_SAMPLES + 1):
+        row = matrix[i]
+        score = row[1]
+        if 'N/A' in score:
+            continue
+        score_value = float(score)
+        if 0 < score_value < 0.95:
+            try:
+                case_id = int(row[0])
+            except (ValueError, TypeError):
+                case_id = i - 1
+            partial_ids.append(str(case_id))
+            partial_correctness_rates.append(score_value * 100)
 
     fig1, ax1 = plt.subplots(figsize=(7, 5))
 
@@ -261,10 +280,15 @@ def plot_correctness_bar_charts(path):
     fig1.savefig(output_path_1, dpi=300, bbox_inches="tight")
     print(f"Saved chart to: {output_path_1}")
 
-    fig2, ax2 = plt.subplots(figsize=(7, 5))
-    ax2.bar(percentage_labels, percentage_counts)
-    ax2.set_title("Correctness Percentage Distribution")
-    ax2.set_ylabel("Count")
+    fig2, ax2 = plt.subplots(figsize=(5, 4))
+    ax2.bar(partial_ids, partial_correctness_rates)
+    ax2.axhline(y=90, color='red', linestyle='--',
+                linewidth=1, label='90% threshold')
+    ax2.set_title("Partially Correct IDs vs Correctness")
+    ax2.set_xlabel("Partially Correct ID")
+    ax2.set_ylabel("Correctness Rate (%)")
+    ax2.set_ylim(0, 100)
+    ax2.legend()
     fig2.tight_layout(pad=1.5)
     output_path_2 = os.path.join(
         path, "results", "plot_correctness_percentage_bar.png")

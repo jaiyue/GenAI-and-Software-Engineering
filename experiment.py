@@ -32,13 +32,14 @@ def write_to_csv_correctness_validity():
             continue
         with open(out_path, 'r') as f:
             contents = f.read().splitlines()
-        if len(contents) == 0 or "Invalid" in contents:
+        first_line = contents[0] if contents else ""
+        if len(contents) == 0 or "Invalid" in first_line:
             inv = inv + 1
             matrix[i + 1][2] = 0
             print("Invalid" + " " + str(i))
         else:
             # Extract the number part before any ' |' separator
-            num_str = contents[0].split(' |')[0].strip()
+            num_str = first_line.split(' |')[0].strip()
             correct = float(num_str)
             ratio = correct / float(test_count[i])
             matrix[i + 1][2] = 1
@@ -110,18 +111,25 @@ def execute_all_python_files():
         cases = inputs_obj["base_input"] + inputs_obj["plus_input"]
         atol = inputs_obj["atol"]
         count = 0
-        failed_args = None
-        for args in cases:
+        failed_cases = []
+        for idx, args in enumerate(cases):
             try:
                 ref_out = ref_func(*args)
-            except Exception:
-                break
+            except Exception as e:
+                failed_cases.append(
+                    {"index": idx, "args": repr(
+                        args), "reason": f"reference_error: {e}"}
+                )
+                continue
             try:
                 out = cand_func(*args)
-            except Exception:
+            except Exception as e:
                 invalid = True
-                failed_args = args
-                break
+                failed_cases.append(
+                    {"index": idx, "args": repr(
+                        args), "reason": f"candidate_error: {e}"}
+                )
+                continue
             try:
                 if atol is not None and isinstance(out, (int, float)) and isinstance(ref_out, (int, float)):
                     ok = abs(out - ref_out) <= atol
@@ -132,18 +140,28 @@ def execute_all_python_files():
             if ok:
                 count += 1
             else:
-                failed_args = args
-                break
+                failed_cases.append(
+                    {
+                        "index": idx,
+                        "args": repr(args),
+                        "reason": f"mismatch: expected={repr(ref_out)}, got={repr(out)}"
+                    }
+                )
+                continue
 
         if invalid:
             result_str = "Invalid"
+            if failed_cases:
+                result_str = result_str + \
+                    " | failed_cases=" + repr(failed_cases)
         else:
             result_str = str(count)
-            if failed_args is not None:
-                result_str = result_str + " | failed_args=" + repr(failed_args)
+            if failed_cases:
+                result_str = result_str + \
+                    " | failed_cases=" + repr(failed_cases)
         with open(out_path, 'w') as output:
             output.write(result_str)
-        if invalid or failed_args is not None:
+        if invalid or failed_cases:
             print(f"{merged_path} -> {result_str}")
     print("Script run completed.")
 

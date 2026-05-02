@@ -195,6 +195,7 @@ def extract_all_metrics_to_csv():
 
 
 def run_sonarqube_eval():
+    # Change this SonarQube project ID/name before running if you need a different identifier.
     project_name = "project"
     session = authenticate(url)
     delete_projects(session)
