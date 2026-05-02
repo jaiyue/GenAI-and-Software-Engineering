@@ -1,18 +1,26 @@
 import os
+import sys
 from csv import reader
+
 import matplotlib.pyplot as plt
 
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+PROJECT_ROOT = os.path.dirname(BASE_DIR)
+HUMAN_RESULTS_ROOT = os.path.join(PROJECT_ROOT, "human_results")
 NUMBER_OF_SAMPLES = 164
 
 
+def _results_csv_path():
+    return os.path.join(HUMAN_RESULTS_ROOT, "results.csv")
+
+
 def calculate_correctness(path):
-    # Read results CSV.
     matrix = []
-    with open(path + "/results/results.csv", "r") as f:
+    with open(_results_csv_path(), "r", encoding="utf-8") as f:
         csv_reader = reader(f)
         for row in csv_reader:
             matrix.append(row)
-    # Compute average correctness.
     correctness = 0
     for i in range(1, NUMBER_OF_SAMPLES + 1):
         if "N/A" not in matrix[i][1]:
@@ -21,9 +29,8 @@ def calculate_correctness(path):
 
 
 def calculate_different_correctness_cases(path):
-    # Read results CSV.
     matrix = []
-    with open(path + "/results/results.csv", "r") as f:
+    with open(_results_csv_path(), "r", encoding="utf-8") as f:
         csv_reader = reader(f)
         for row in csv_reader:
             matrix.append(row)
@@ -43,15 +50,12 @@ def calculate_different_correctness_cases(path):
             else:
                 count_partially_correct += 1
 
-    results = [count_correct, count_incorrect, count_partially_correct]
-
-    return results
+    return [count_correct, count_incorrect, count_partially_correct]
 
 
 def get_incorrect_and_partial_ids(path):
-    # Read results CSV.
     matrix = []
-    with open(path + "/results/results.csv", "r") as f:
+    with open(_results_csv_path(), "r", encoding="utf-8") as f:
         csv_reader = reader(f)
         for row in csv_reader:
             matrix.append(row)
@@ -80,14 +84,12 @@ def get_incorrect_and_partial_ids(path):
 
 
 def calculate_correctness_by_percentage(path):
-    # Read results CSV.
     matrix = []
-    with open(path + "/results/results.csv", "r") as f:
+    with open(_results_csv_path(), "r", encoding="utf-8") as f:
         csv_reader = reader(f)
         for row in csv_reader:
             matrix.append(row)
 
-    # Count correctness ranges.
     count_75_95 = 0
     count_50_75 = 0
     count_25_50 = 0
@@ -106,9 +108,8 @@ def calculate_correctness_by_percentage(path):
 
 
 def get_partial_ids_by_percentage(path):
-    # Read results CSV.
     matrix = []
-    with open(path + "/results/results.csv", "r") as f:
+    with open(_results_csv_path(), "r", encoding="utf-8") as f:
         csv_reader = reader(f)
         for row in csv_reader:
             matrix.append(row)
@@ -162,16 +163,15 @@ def return_percentages_correctness(path):
 def read_all_exec_results(path):
     results = []
     for i in range(0, NUMBER_OF_SAMPLES):
-        with open(path + "/" + str(i) + "/output_correctness_validity.txt", "r") as f:
+        with open(os.path.join(HUMAN_RESULTS_ROOT, str(i), "output_validity.txt"), "r", encoding="utf-8") as f:
             content = f.read().splitlines()
             results.append(content[0])
     return results
 
 
 def count_invalid(path):
-    # Read results CSV.
     matrix = []
-    with open(path + "/results/results.csv", "r") as f:
+    with open(_results_csv_path(), "r", encoding="utf-8") as f:
         csv_reader = reader(f)
         for row in csv_reader:
             matrix.append(row)
@@ -188,14 +188,12 @@ def calculate_validity(path):
 
 
 def analyze_sonarqube_metrics(path):
-    """Analyze SonarQube metrics and return failed case counts and IDs."""
     matrix = []
-    with open(path + "/results/results.csv", "r") as f:
+    with open(_results_csv_path(), "r", encoding="utf-8") as f:
         csv_reader = reader(f)
         for row in csv_reader:
             matrix.append(row)
 
-    # Metric name -> (column index, fail condition)
     metrics = {
         'security_rating': (3, lambda x: float(x) != 1.0),
         'bugs': (4, lambda x: int(float(x)) > 0),
@@ -214,10 +212,8 @@ def analyze_sonarqube_metrics(path):
             val = row[col_idx]
             try:
                 if condition(val):
-                    # Case ID is in column 0.
                     not_passed_ids.append(int(row[0]))
             except (ValueError, TypeError):
-                # Skip non-convertible values.
                 pass
         results[metric_name] = (len(not_passed_ids), not_passed_ids)
     return results
@@ -226,7 +222,7 @@ def analyze_sonarqube_metrics(path):
 def plot_correctness_bar_charts(path):
     case_counts = calculate_different_correctness_cases(path)
     matrix = []
-    with open(path + "/results/results.csv", "r") as f:
+    with open(_results_csv_path(), "r", encoding="utf-8") as f:
         csv_reader = reader(f)
         for row in csv_reader:
             matrix.append(row)
@@ -255,28 +251,15 @@ def plot_correctness_bar_charts(path):
             partial_correctness_rates.append(score_value * 100)
 
     fig1, ax1 = plt.subplots(figsize=(7, 5))
-
-    wedges, _ = ax1.pie(
-        case_counts,
-        labels=None,
-        autopct=None,
-        startangle=90,
-        pctdistance=0.7,
-        textprops={"fontsize": 9}
-    )
+    wedges, _ = ax1.pie(case_counts, labels=None, autopct=None,
+                        startangle=90, pctdistance=0.7, textprops={"fontsize": 9})
     ax1.set_title("Correctness Case Distribution")
     ax1.axis("equal")
-    ax1.legend(
-        wedges,
-        case_legend_labels,
-        loc="upper right",
-        bbox_to_anchor=(1.35, 1.0),
-        frameon=False,
-        title="Cases"
-    )
+    ax1.legend(wedges, case_legend_labels, loc="upper right",
+               bbox_to_anchor=(1.35, 1.0), frameon=False, title="Cases")
     fig1.subplots_adjust(right=0.72)
     output_path_1 = os.path.join(
-        path, "results", "plot_correctness_cases_pie.png")
+        HUMAN_RESULTS_ROOT, "plot_correctness_cases_pie.png")
     fig1.savefig(output_path_1, dpi=300, bbox_inches="tight")
     print(f"Saved chart to: {output_path_1}")
 
@@ -291,47 +274,49 @@ def plot_correctness_bar_charts(path):
     ax2.legend()
     fig2.tight_layout(pad=1.5)
     output_path_2 = os.path.join(
-        path, "results", "plot_correctness_percentage_bar.png")
+        HUMAN_RESULTS_ROOT, "plot_correctness_percentage_bar.png")
     fig2.savefig(output_path_2, dpi=300, bbox_inches="tight")
     print(f"Saved chart to: {output_path_2}")
 
     plt.show()
 
 
-print()
-print("Average Correctness with Invalid Generations:",
-      calculate_correctness(os.getcwd()))
-print()
-different_correctness_cases = calculate_different_correctness_cases(
-    os.getcwd())
-print("Correct:", str(different_correctness_cases[0]), "Incorrect:", str(
-    different_correctness_cases[1]), "Partially Correct:", str(different_correctness_cases[2]))
-incorrect_ids, partially_correct_ids = get_incorrect_and_partial_ids(
-    os.getcwd())
-print("Incorrect IDs:", ', '.join(str(i)
-      for i in incorrect_ids) if incorrect_ids else 'None')
-print()
-correctness_by_percentage = calculate_correctness_by_percentage(os.getcwd())
-partial_ids_by_percentage = get_partial_ids_by_percentage(os.getcwd())
-print("95 > N > 75:", correctness_by_percentage[0], "\n75 >= N > 50:", correctness_by_percentage[1],
-      "\n50 >= N > 25:", correctness_by_percentage[2], "\n25 >= N > 0:", correctness_by_percentage[3])
-print("95 > N > 75 IDs:", ', '.join(str(i)
-      for i in partial_ids_by_percentage[0]) if partial_ids_by_percentage[0] else 'None')
-print("75 >= N > 50 IDs:", ', '.join(str(i)
-      for i in partial_ids_by_percentage[1]) if partial_ids_by_percentage[1] else 'None')
-print("50 >= N > 25 IDs:", ', '.join(str(i)
-      for i in partial_ids_by_percentage[2]) if partial_ids_by_percentage[2] else 'None')
-print("25 >= N > 0 IDs:", ', '.join(str(i)
-      for i in partial_ids_by_percentage[3]) if partial_ids_by_percentage[3] else 'None')
-print()
-print("Validity percentage:", calculate_validity(os.getcwd()))
-print("Number of Invalid Generations:", count_invalid(os.getcwd()))
+if __name__ == "__main__":
+    print()
+    print("Average Correctness with Invalid Generations:",
+          calculate_correctness(HUMAN_RESULTS_ROOT))
+    print()
+    different_correctness_cases = calculate_different_correctness_cases(
+        HUMAN_RESULTS_ROOT)
+    print("Correct:", str(different_correctness_cases[0]), "Incorrect:", str(
+        different_correctness_cases[1]), "Partially Correct:", str(different_correctness_cases[2]))
+    incorrect_ids, partially_correct_ids = get_incorrect_and_partial_ids(
+        HUMAN_RESULTS_ROOT)
+    print("Incorrect IDs:", ', '.join(str(i)
+          for i in incorrect_ids) if incorrect_ids else 'None')
+    print()
+    correctness_by_percentage = calculate_correctness_by_percentage(
+        HUMAN_RESULTS_ROOT)
+    partial_ids_by_percentage = get_partial_ids_by_percentage(
+        HUMAN_RESULTS_ROOT)
+    print("95 > N > 75:", correctness_by_percentage[0], "\n75 >= N > 50:", correctness_by_percentage[1],
+          "\n50 >= N > 25:", correctness_by_percentage[2], "\n25 >= N > 0:", correctness_by_percentage[3])
+    print("95 > N > 75 IDs:", ', '.join(str(i)
+          for i in partial_ids_by_percentage[0]) if partial_ids_by_percentage[0] else 'None')
+    print("75 >= N > 50 IDs:", ', '.join(str(i)
+          for i in partial_ids_by_percentage[1]) if partial_ids_by_percentage[1] else 'None')
+    print("50 >= N > 25 IDs:", ', '.join(str(i)
+          for i in partial_ids_by_percentage[2]) if partial_ids_by_percentage[2] else 'None')
+    print("25 >= N > 0 IDs:", ', '.join(str(i)
+          for i in partial_ids_by_percentage[3]) if partial_ids_by_percentage[3] else 'None')
+    print()
+    print("Validity percentage:", calculate_validity(HUMAN_RESULTS_ROOT))
+    print("Number of Invalid Generations:", count_invalid(HUMAN_RESULTS_ROOT))
 
-# SonarQube analysis summary.
-print("\nSonarQube Analysis (cases not passing criteria):")
-sonar_results = analyze_sonarqube_metrics(os.getcwd())
-for metric, (count, ids) in sonar_results.items():
-    ids_str = ', '.join(str(i) for i in ids) if ids else 'None'
-    print(f"{metric}: {count} cases not passed (IDs: {ids_str})")
+    print("\nSonarQube Analysis (cases not passing criteria):")
+    sonar_results = analyze_sonarqube_metrics(HUMAN_RESULTS_ROOT)
+    for metric, (count, ids) in sonar_results.items():
+        ids_str = ', '.join(str(i) for i in ids) if ids else 'None'
+        print(f"{metric}: {count} cases not passed (IDs: {ids_str})")
 
-plot_correctness_bar_charts(os.getcwd())
+    plot_correctness_bar_charts(HUMAN_RESULTS_ROOT)
